@@ -1,8 +1,6 @@
-
 .dashboadright{
     width: 401px;
     height: 810px;
-    background-color: tomato;
     flex: 1 1;
     display: flex;
     background-color: white;
@@ -49,7 +47,6 @@
     top: 60px;
     /* overflow-y:auto; */
     width: 330px;
-   
     background-color: #FFFFFF;
     box-shadow: 2px 2px 15px rgba(70, 64, 67, 0.1);
     border-radius: 10px;
@@ -80,7 +77,6 @@ a{
 
 
 .notifylink{
-  
     height: 60px;
     padding-top: 8px;
     border-bottom: 1.5px solid #D4D4D7;
@@ -171,13 +167,7 @@ a{
     color: #FF7506;
     padding-left: 3px;
 }
-.listservice{
-    
-}
-.listlevel{
-  
-}
-.listdeviceright{}
+
 .listdevicertop{
     width: 163px;
     display: flex;
@@ -210,36 +200,26 @@ a{
     line-height: 18px;
     color: #FF7506;
 }
-
-
 .month{
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
-
-
 .calendar{
-    
     padding-bottom: 2px;
 }
-
 .rowleft{
     width: 4px;
 }
-
-
-
 .sdp {
     width: auto !important;
     height: 290px !important;
     --theme-color: orange !important;
     --disabled-color: orange !important;
-  }
-  .sdp--month-name {
+}
+.sdp--month-name {
     color: orange !important;
-  }
-  .sdp--square-btn__shadowed {
+}
+.sdp--square-btn__shadowed {
     color: orange !important;
-  }
-  
+}

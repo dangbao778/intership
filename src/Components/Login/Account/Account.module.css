@@ -1,29 +1,16 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-
 .bell{
     margin-left: 10px;
 }
 .main {
-    width: 1440px;
-    height: 810px;
-    background: #F7F7F7;
-    border-radius: 16px;
-    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
-.left{
-    position: absolute;
-    width: 200px;
-    height: 810px;
-  
-    background: #FFFFFF;
-    box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
-    border-radius: 16px 0px 0px 16px;
-}
-
-.list ul {
+/* .main .left {
+    width: 15%;
+    height: 100%;
+} */
+/* .list ul {
     list-style: none;
     height: 48px;
     
@@ -40,145 +27,26 @@
     position: absolute;
     left: 0px;
     top: 150px;
-
     height: 288px;
-    /* background-color: #FF9138; */
-    
-}
-
-.list li img {
-    vertical-align: middle;
-}
-.list button img {
-    vertical-align: middle;
-}
-.listheight{
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    color: #7E7D88;
-    margin: 0px 8px
-}
-
-.listtitle{
-    width: 200px;
-    height: 48px;
-    background: #FFFFFF;
-    display: block;
-    border: 1px solid #FFFFFF ;
-    position: relative;
-}
+} */
 
 span{
-    margin-left: 20px;
     font-size: 14px;
 }
-
-.listitem{
-   margin-top: 10px;
-   margin-left: 10px;
-}
-
-.listtitle:hover{
-    background: #FFF2E7;
-    color: #FF7506;
-}
-
-
-
-.listitem:active> a{
-    color: #FF7506;
-    
-}
-
-.logout{
-    position: absolute;
-    width: 176px;
-    height: 48px;
-    left: 12px;
-    top: 580px;
-
-
-
-    background: #FFF2E7;
-    border-radius: 8px;
-}
-
-div{
-    vertical-align: middle;
-}
-
-.color{
-    vertical-align: middle;
-    color: #FF7506;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 580;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 5px;
-}
-
-
-.subnav{
-    /* display: none; */
-    /* background-color: red; */
-    position: absolute;
-    width: 200px;
-    height: 144px;
-    top: 0px;
-    left: 201px;
-    z-index: 1;
-    background: #FFFFFF;
-    display: grid;
-    grid-template-rows: 48px 48px 48px;
-    align-items: center;
-    filter: drop-shadow(3px 3px 4px rgba(70, 64, 67, 0.1));
-    border-radius: 0px 12px 12px 0px;
-}
-
-li{
-    display: block;
-}
-.subnav li a {
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 48px;
-    color: #7E7D88;
-    
-}
-
-.subnav li:hover>a{
-    color: #FF7506;
-
-}
-
-.subnav li:hover{
-    background: #FFF2E7;
-    color: #FF7506;
-}
-
-.right{
-  
+.main .right{
+    width: 100%;
+    height: 965px;
+    background: #f3f3f3;
 }
 
 
 .top {
     position: absolute;
-    width: 1240px;
+    width: 80%;
     height: 88px;
-    left: 200px;
-    top: 0px;
-    /* border: 1px solid #FF9138; */
 }
-.personal{
+.top .personal{
     position: absolute;
-   
-    left: 15px;
     top: 30px; 
     font-family: Nunito;
     font-style: normal;
@@ -186,12 +54,14 @@ li{
     font-size: 20px;
     line-height: 30px;
     color: #FF9138;
+    margin-left: 20px;
 }
 
-.topright{
+.top .topright{
     display: flex;
     justify-content: flex-end;
     padding: 25px 70px;
+    margin-left: 30px;
 }
 /* thông báo  */
 .bell{
@@ -298,14 +168,14 @@ p{
     background: #FFFFFF;
     box-shadow: 0px 2px 6px rgba(219, 219, 219, 0.5);
     border-radius: 12px;
-    width: 1112px;
+    width: 65%;
     height: 397px;
     position: absolute;
     left: 224px;
     top: 168px;
     display: grid;
     grid-template-columns: 305px 733px;
-    margin-left: 20px;
+    margin-left: 15%;
 }   
 .pic{
     /* position: absolute; */
@@ -327,31 +197,31 @@ p{
     position: absolute;
     width: 186px;
     height: 36px;
-    left: 55px;
+    left: 70px;
     top: 307px;
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 36px;
-
     color: #282739;
 }
 
 
 .bottomleft{
     padding-top: 30px;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 
 .bottomright{
-  display: grid ;
-  grid-template-columns: 410px 366px;
-  grid-template-rows: 56px 50px 134px;
-  align-content: space-evenly;
-  /* display: flex;
-  flex-wrap: wrap; */
+    display: grid ;
+    grid-template-columns: 410px 366px;
+    grid-template-rows: 56px 50px 134px;
+    align-content: space-evenly;
+    margin-left: 50px;
+    /* display: flex;
+    flex-wrap: wrap; */
 }
 
 .titlecontnet{
@@ -369,6 +239,4 @@ p{
     font-size: 16px;
     line-height: 24px;
     color: #282739;
-
-
 }

@@ -14,25 +14,14 @@ import { Link  } from 'react-router-dom'
 function Listitem(){
 
     const slidebars = document.querySelectorAll('.SliderbarItem')
-    
-
-
-    slidebars.forEach( (slidebar:any) => {
-  
-      slidebar.onclick = function () {
-  
-         let items = document.querySelector<HTMLElement>('.SliderbarItem.active')!
-              items.classList.remove('active')
-          
-          this.classList.add('active')
-          
-                        
-      }
-  })
-
-
-  const [info, setInfo] = useState(false);
-
+        slidebars.forEach( (slidebar:any) => {
+        slidebar.onclick = function () {
+            let items = document.querySelector<HTMLElement>('.SliderbarItem.active')!
+                items.classList.remove('active')
+            this.classList.add('active')
+        }
+    })
+    const [info, setInfo] = useState(false);
     return(
     <div className='Sliderbar'>
         <div className="alta ">
@@ -72,7 +61,7 @@ function Listitem(){
                 </Link>
             </div>
             <div className="SliderbarItem"
-                  onMouseEnter={()=>setInfo(true)} onMouseLeave={()=>setInfo(false)}
+                onMouseEnter={()=>setInfo(true)} onMouseLeave={()=>setInfo(false)}
             >              
             <Link to= ''  className="Link">  
                     <img className="ItemIMG" src={logo_setting} alt="alta"></img>
@@ -86,7 +75,7 @@ function Listitem(){
                         </Link>
                         </div>
                         <div className="list_subnav">
-                         <Link to='/dashboard/AccountManagement' className="Linksubnav">
+                        <Link to='/dashboard/AccountManagement' className="Linksubnav">
                             <div className="item" >Quản lý tài khoản</div>
                         </Link>
                         </div>
@@ -98,15 +87,13 @@ function Listitem(){
                     </div>
                 }
             </div>
-        </div>
-        
             <div className='logout'>
-                <Link to='/' className="Linkout">
-                    <img src={logo_logout} alt='logo_logout'/>
+            <Link to='/' className="Linkout">
+                <img src={logo_logout} alt='logo_logout'/>
                 <div className='out'>Đăng xuất </div>
-                </Link>
+            </Link>
             </div>
-     
+        </div>
     </div>
     )
 }

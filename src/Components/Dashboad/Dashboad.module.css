@@ -7,16 +7,21 @@
 .dashboad{
     display: flex;
     position: relative;
-    width: 1440px;
-    background: #F7F7F7;
-    border-radius: 16px;
+    
+    
+    width: 100%;
 }
 
 
 .dashboadmiddle{
     flex: 2.9  1;
-    padding: 20px;
+    padding: 0 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 930px;
+    background: #F7F7F7;
+}
+.dashboad .top{
+    margin-bottom: 10px;
 }

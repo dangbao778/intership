@@ -1,5 +1,3 @@
-
-
 .dashboadtitle{
     text-align: left;
     font-family: Nunito;
@@ -9,6 +7,7 @@
     line-height: 30px;
     color: #FF9138;  
     /* margin: 0px 8px; */
+    margin: 10px 10px 0 10px;
 }
 .levelchart{
     color: #FF7506;
@@ -27,8 +26,8 @@
 }
 .dashboaditem{
     background-color: #fff;
-    width: 186px;
-    height: 120px;
+    width: 280px;
+    height: 180px;
     border-radius: 10px;
 }
 .itemtop{
@@ -41,10 +40,10 @@
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 21px;
     margin-left: 10px;
-    width: 70px;
+    width: 100px;
     color: #535261;
 }
 
@@ -58,8 +57,9 @@
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     line-height: 45px;
+    margin-top: 38px;
 }
 
 .goup{
@@ -77,8 +77,8 @@
     align-items: center;
     margin: 17px 0;
     padding: 0 7px;
-    height: 11px;
-    margin-top: 23px;
+    height: 20px;
+    margin-top: 50px;
 }
 .itemnprecentdown{
     background: rgba(231, 63, 63, 0.15);
@@ -87,14 +87,14 @@
     align-items: center;
     margin: 17px 0;
     padding: 0 7px;
-    height: 11px;
-    margin-top: 23px;
+    height: 20px;
+    margin-top: 50px;
 }
 .precent{
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
-    font-size: 8px;
+    font-size: 20px;
     color: #FF9138;
     margin-left: 2px;
 }

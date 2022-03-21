@@ -1,5 +1,6 @@
 .listservice{
-    width: 1440px;
+    width: 100%;
+    height: 950px;
     background: #F7F7F7;
     border-radius: 16px;
     display: flex;
@@ -329,7 +330,7 @@
 .detail__container__update{
     position: absolute;
     top: 129px;
-    left: 1140px;
+    left: 1490px;
 }
 .eidt{
     background: #FFF2E7;

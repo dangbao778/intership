@@ -1,8 +1,7 @@
-import classes from "./Newlevel.module.css"
+import newlevel from "./Newlevel.module.css"
 import Bellactive from "../../../Bellactive";
 import {Link} from 'react-router-dom';
 import Levelgoto from "../../../image/gotoright.svg";
-
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import  {useState} from 'react';
@@ -16,66 +15,64 @@ function Newlevel() {
     const defaultOptionservice = optionservice[0];
     const [isShow, setIsShow] = useState(false);
     return(
-        <div className={classes.level}>
-            <div className={classes.levelinfo}>
-                <div className={classes.levelinfolist}>
-                    <p className={classes.leveltitle}>
+        <div className={newlevel.level}>
+            <div className={newlevel.levelinfo}>
+                <div className={newlevel.levelinfolist}>
+                    <p className={newlevel.leveltitle}>
                         Cấp số
                     </p>
-                    
-                    <img src={Levelgoto} alt="levelgoto" className={classes.levelgoto}></img>
-            
-                    <p className={classes.leveltitle}>
+                    <img src={Levelgoto} alt="levelgoto" className={newlevel.levelgoto}></img>
+                    <p className={newlevel.leveltitle}>
                         Danh sách cấp số
                     </p>
-                    <img src={Levelgoto} alt="levelgoto" className={classes.levelgoto}></img>
-                    <p className={classes.levellist }>
+                    <img src={Levelgoto} alt="levelgoto" className={newlevel.levelgoto}></img>
+                    <p className={newlevel.levellist }>
                         Cấp số mới
                     </p>
                 </div>
-                <div className={classes.bell}>
+                <div className={newlevel.bell}>
                     <Bellactive/>
                 </div>
             </div>
-            <div className={classes.levelcontainer}>
-                <div className={classes.levellisttitle}>
+            <div className={newlevel.levelcontainer}>
+                <div className={newlevel.levellisttitle}>
                     Quản lý cấp số
                 </div>
-                <div className={classes.Newlevelitem}>
-                    <div className={classes.list}>
-                        <p className={classes.levelnew}>CẤP SỐ MỚI</p>
-                        <p className={classes.service} >Dịch vụ khách hàng lựa chọn</p>
-                        <div className={classes.leveldrow}>
+                <div className={newlevel.Newlevelitem}>
+                    <div className={newlevel.list}>
+                        <p className={newlevel.levelnew}>CẤP SỐ MỚI</p>
+                        <p className={newlevel.service} >Dịch vụ khách hàng lựa chọn</p>
+                        <div className={newlevel.leveldrow}>
                             <Dropdown options={optionservice} 
-                                className={classes.chartDropdown}
+                                className={newlevel.chartDropdown}
                                         onChange={(e)=>sumitservice(e)} 
                                         value={defaultOptionservice} placeholder="Select an option" />
                         </div>     
-                        <div className={classes.button}>
+                        <div className={newlevel.button}>
                         <Link to='/level'>
-                            <div className={classes.cannel}>
-                                <div className={classes.canneltitle}>Hủy bỏ  </div>
+                            <div className={newlevel.cannel}>
+                                <div className={newlevel.canneltitle}>Hủy bỏ  </div>
                             </div>
                         </Link>    
                         {/* <Link to= '/level/service'> */}
-                            <div  className={classes.print} onClick={()=>setIsShow(true)} >
-                                <div className={classes.printtitle}>In số </div>
-                                { isShow &&  <div className={classes.modal}>
-                                        <div className={classes.modal__item}>
+                            <div  className={newlevel.print} onClick={()=>setIsShow(true)} >
+                                <div className={newlevel.printtitle}>In số </div>
+                                { isShow &&  <div className={newlevel.modal}>
+                                        <div className={newlevel.modal__item}>
                                             <Link to ="/level/">
-                                            <div className={classes.modal__item_close}>
+                                            <div className={newlevel.modal__item_close}>
                                                     &times;
                                             </div>
                                             </Link>
-                                            <div className={classes.modal__item_title}>Số thứ tự được cấp</div>
-                                            <div className={classes.modal__item_number}>2001201</div>
-                                            <div className={classes.modal__item_des}>DV: Khám răng hàm mặt <span>(tại quầy số 1)</span></div>
-                                            <div className={classes.modal__item_footer}>s
-                                                <div className={classes.modal__item_footer__item}>
+                                            <div className={newlevel.modal__item_title}>Số thứ tự được cấp</div>
+                                            <div className={newlevel.modal__item_number}>2001201</div>
+                                            <div className={newlevel.modal__item_des}>DV: Khám răng hàm mặt <span>(tại quầy số 1)</span></div>
+                                            <div className={newlevel.modal__item_footer}>s
+                                                <div className={newlevel.modal__item_footer__item}>
                                                     <span>Thời gian cấp:</span>
                                                     <span>09:30 11/10/2021</span>
                                                 </div>
-                                                <div className={classes.modal__item_footer__item}>
+                                                <div className={newlevel.modal__item_footer__item}>
                                                     <span>Thời gian cấp:</span>
                                                     <span>09:30 11/10/2021</span>
                                                 </div>

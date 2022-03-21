@@ -5,14 +5,14 @@
 }
 
 .listlevel{
-    width: 1240px;
+    width: 100%;
     background: #F7F7F7;
     border-radius: 16px;
     display: flex;
 }
 
 .listlevelright{
-    width: 1240px;
+    height: 830px;
     display: flex;
     flex: 4 1;
     flex-direction: column;

@@ -1,11 +1,11 @@
 
 import './App.css';
 import Dashboad from './Components/Dashboad';
-import Login from "./Components/Login/Login";
-import Wrongpass from "./Components/Login/Wrongpass";
-import Forgotpass  from "./Components/Login/Forgotpass";
-import Resetpass  from "./Components/Login/Resetpass";
-import Account  from "./Components/Login/Account";
+import Login from "./Components/Login/Login/Login";
+import Wrongpass from "./Components/Login/Wrongpass/Wrongpass";
+import Forgotpass  from "./Components/Login/Forgotpass/Forgotpass";
+import Resetpass  from "./Components/Login/Resetpass/Resetpass";
+import Account  from "./Components/Login/Account/Account";
 import Listlevel from './Components/Level/Listlevel'
 import {Routes , Route } from 'react-router-dom';
 import Addlevel from './Components/Level/Addlevel';
@@ -27,19 +27,14 @@ import Detaildevice from './Components/Device/Detaildevice';
 import Updatedevice from './Components/Device/Updatedevice';
 import Listitem from './Components/Listitem'
 function App() {
-
-  
- 
-
   return (
-
     <div className="App"> 
-         <Routes>
-         <Route path='/' element={<Login/>}/>
+        <Routes>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/wrong' element={<Wrongpass/>}/>
           <Route path='/wrong/forgot' element={<Forgotpass/>}/>
           <Route path='/wrong/forgot/reset' element={<Resetpass/>}/>
-          <Route path='/account' element={<Account/>}/>
+          <Route path='/account' element={<><Listitem/><Account/></>}/>
           <Route path='/dashboard' element={<><Listitem/><Dashboad/></>}/>
           <Route path='/level' element={<><Listitem/><Listlevel/></>}/>
           <Route path='/level/add-level' element={<Addlevel/>}/>
@@ -54,6 +49,7 @@ function App() {
           <Route path='/Device' element={<><Listitem/> <Device/></>}/>
           <Route path='/Device/add-device' element={<Adddevice/>}/>
           <Route path='/service' element={<><Listitem/> <Service/></>}/>
+          <Route path='/service/detailservice' element={<><Listitem/> <Detailservice/></>}/>
           <Route path='/report' element={<><Listitem/> <Report/></>}/>
           <Route path='/listservice' element={<Addservice/>}/>
           <Route path='/dashboard/RoleManagement' element={<RoleManagement/>}/>
@@ -61,10 +57,8 @@ function App() {
           <Route path='/service/detailservice' element={<Detailservice/>}/>
           <Route path='/device/detaildevice' element={<Detaildevice/>}/>
           <Route path='/device/updatedevice' element={<Updatedevice/>}/>
-    </Routes>
+      </Routes>
     </div>  
-
-
   );
 }
 

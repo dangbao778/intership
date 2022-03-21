@@ -3,9 +3,9 @@
     flex-direction: column;
     background: #FFFFFF;
     align-items: center;
-    box-shadow: 0px 4px 6px rgba(219, 219, 219, 0.5);
     border-radius: 16px 0px 0px 16px;
-    width: 200px;
+    width: 15%;
+    height: 100%;
 }
 .alta{
     margin-top: 20px;
@@ -17,9 +17,14 @@
 }
 .list{
     margin-top: 30px;
-    width: 200px;
-    height: 44px;
-    height: 610px;
+    width: 100%;
+    height: 100%;
+}
+.list .Link{
+    margin-left: 10%;
+}
+.list .title{
+    margin-left: 3%;
 }
 .SliderbarItem{
     padding: 15px 0px;
@@ -36,7 +41,6 @@
 .SliderbarItem:hover{
     background-color: #FF7506;
     color: #FFFFFF;
-   
 }
 .SliderbarItem:hover.title{
     color:#FFFFFF;
@@ -44,11 +48,9 @@
 
 .active{
     background-color: #FF7506;
-  
 }
 .active .title{
     color: #FFFFFF ;
-  
 }
 
 
@@ -60,9 +62,8 @@
 }
 .subnav{
     position: absolute;
-  
-    left: 200px;
-    top: 408px;
+    left: 150px;
+    top: 410px;
     z-index: 1;
     background: #FFFFFF;
     padding: 0;
@@ -83,7 +84,7 @@
 }
 .subnav {
     width: 170px;
-    
+    margin-left: 5%;
 }
 .Linksubnav:hover .item{
 
@@ -91,8 +92,6 @@
 }
 .subnav .list_subnav:hover{
     background-color: #FF7506;
- 
-   
 }
 .subnav .list_subnav1:hover{
     background-color: #FF7506;
@@ -101,25 +100,23 @@
 .subnav .list_subnav2:hover{
     background-color: #FF7506;
     border-radius: 0px 0px 12px 0px;
-   
 }
 
 
 .logout{
     position: absolute;
-    width: 153px;
+    width: 9%;
     height: 37px;
-    left: 12px;
-    top: 720px;
+    top: 900px;
     background: #FFF2E7;
     border-radius: 8px;
     display: flex;
     align-items: center;
     padding: 10px;
+    margin-left: 10px;
 }
 
 .out{
-    
     margin-left: 10px;
     font-family: Nunito;
     font-style: normal;

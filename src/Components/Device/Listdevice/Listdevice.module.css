@@ -1,44 +1,43 @@
 .device{
     /* margin-left: 20px; */
     position: relative;
-  }
+}
 .info{
-      display:flex;
-      justify-content:space-between;
-  }
-  
+    display:flex;
+    justify-content:space-between;
+}
+
 .infolist{
-      display: flex;
-      align-items: center;
-  }
+    display: flex;
+    align-items: center;
+}
 .title{
-      font-family: Nunito;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 30px;
-      color: #7E7D88;
-  }
-  
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #7E7D88;
+}
 .devicegoto{
-      color: #7E7D88;
-      padding-left: 10px;
-      padding-right: 10px;
-  }
-  
+    color: #7E7D88;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .detaillist{
-      font-family: Nunito;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      line-height: 30px;
-      color: #FF7506;
-  
-  }
-  
-  .bell{
-      padding-right: 40px;
-  }
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FF7506;
+
+}
+
+.bell{
+    padding-right: 40px;
+}
 
 
 .container{
@@ -90,7 +89,6 @@
 
 .deviceitem{
     margin-right: 30px;
-  
 }
 .listitem{
     display: flex;
@@ -106,8 +104,8 @@
     color: #282739;
 }
 .devicedrow{
-   width: 300px;
-   margin-top: 10px;
+    width: 300px;
+    margin-top: 10px;
 }
 
 .deviceitemseach{
@@ -197,7 +195,7 @@
     position:absolute;
     width: 80px;
     height: 80px;
-    left: 1132px;
+    left: 1520px;
     top: 237px;
     display: flex;
     box-shadow: 0px 0px 6px #E7E9F2;

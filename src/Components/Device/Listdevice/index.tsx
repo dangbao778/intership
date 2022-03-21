@@ -1,4 +1,4 @@
-import classes from "./Listdevice.module.css"
+import listdevice_style from "./Listdevice.module.css"
 import Levelgoto from "../../image/gotoright.svg";
 import Bellactive from "../../Bellactive";
 import fi_search from"../../image/fi_search.svg"
@@ -13,21 +13,17 @@ import {connect} from 'react-redux';
 import green from '../../image/green.svg'
 import red from '../../image/red.svg'
 import Page from "../../Page";
+import Listitem from "../../Listitem";
 function Listdevice({dataTable,fetchData}:any){
     useEffect(() => {
         fetchData();
-      }, []);
-  
- 
-
+    }, []);
     const ServiceWaitPoint = ()=>{
         return (
                 <><span className="red">
-                  <img src={red}></img>
-                  </span><span>Ngưng hoạt động</span>
-                  
-                  </>
-                  
+                <img src={red}></img>
+                </span><span>Ngưng hoạt động</span>
+                </>
         )
     }  
     
@@ -35,20 +31,16 @@ function Listdevice({dataTable,fetchData}:any){
     const ServiceUsedPoint1 = ()=>{
     return (
             <><span className="green">
-                <img src={green} ></img>
-                
-              </span><span>Kết nối</span></>
-    )
+                <img src={green} ></img>    
+            </span><span>Kết nối</span></>
+        )
     }  
-    
     const ServiceWaitPoint1 = ()=>{
         return (
                 <><span className="red">
-                  <img src={red}></img>
-                  </span><span>Mất kết nối</span>
-                  
-                  </>
-                  
+                <img src={red}></img>
+                </span><span>Mất kết nối</span>
+                </>
         )
     }  
     
@@ -57,42 +49,20 @@ function Listdevice({dataTable,fetchData}:any){
     return (
             <><span className="green">
                 <img src={green} ></img>
-                
-              </span><span>Hoạt động</span></>
-    )
+            </span><span>Hoạt động</span></>
+        )
     }  
-    
-    
-
-   
-
     const data = dataTable.dataEquiment
-        
-        
-       
-        
-
-
     const [dataEquiment,setDataEquiment] = useState(data)
-
 const options = [
     'Tất cả', 'Hoạt động', 'Ngưng hoạt động'
-  ];
-
-  
+    ];
 const defaultOption = options[0];
 
 const optionsConnect = [
 'Tất cả', 'Kết nối', 'Mất kết nối'
 ];
-
-
-    
-
-
-    const handleDropdownValue = (e:any)=>{
-        
-            
+    const handleDropdownValue = (e:any)=>{    
             if(e.value=='Hoạt động'){
                     const filterdata = data.filter( (item:any) => item.status == 'Hoạt động')
                     setDataEquiment(filterdata)
@@ -108,220 +78,168 @@ const optionsConnect = [
                     const filterdata = data.filter((item:any)=> item.connet == 'Kết nối')
                     setDataEquiment(filterdata)
             }
-         
             else{
                     setDataEquiment(data)
             }
-             
-       }
+        }
     
     
     const [showMore , setShowMore] = useState(false)
 
     const [search , setSeatch] = useState('')
-
-
-
-
-
     return(
-        <div className={classes.device}>
-              <div className={classes.info}>
-                <div className={classes.infolist}>
-                    <div className={classes.title}>
+        <div className={listdevice_style.device}>
+            <div className={listdevice_style.info}>
+                <div className={listdevice_style.infolist}>
+                    <div className={listdevice_style.title}>
                         Thiết bị 
                     </div>
-                    
-                    <img src={Levelgoto} alt="levelgoto" className={classes.devicegoto}></img>
-            
-                    <div className={classes.detaillist}>
+                    <img src={Levelgoto} alt="levelgoto" className={listdevice_style.devicegoto}></img>
+                    <div className={listdevice_style.detaillist}>
                         Danh sách thiết bị 
                     </div>
-
                 </div>
-                <div className={classes.bell}>
+                <div className={listdevice_style.bell}>
                     <Bellactive/>
                 </div>
             </div>
-            <div className={classes.container}>
-                <div className={classes.listtitle}>
+            <div className={listdevice_style.container}>
+                <div className={listdevice_style.listtitle}>
                     Danh sách thiết bị
                 </div>
-
-                <div className={classes.devicelistdrow}>
-                    <div className={classes.listitemdrow}>
-                        <div className={classes.deviceitem}>
-                            <div className={classes.devicename}>Trạng thái hoạt động</div>
-                                <div className={classes.devicedrow}>
-                                    <Dropdown options={ options} 
-                                       
-                                       onChange={(e)=>handleDropdownValue(e)} 
-                                       value={defaultOption} placeholder="Select an option" />
-                                        
+                <div className={listdevice_style.devicelistdrow}>
+                    <div className={listdevice_style.listitemdrow}>
+                        <div className={listdevice_style.deviceitem}>
+                            <div className={listdevice_style.devicename}>Trạng thái hoạt động</div>
+                                <div className={listdevice_style.devicedrow}>
+                                    <Dropdown options={ options}    
+                                    onChange={(e)=>handleDropdownValue(e)} 
+                                    value={defaultOption} placeholder="Select an option" />
                                 </div>
                         </div>
-
-                        <div className={classes.deviceitem}>
-                            <div className={classes.devicename}>Trạng thái hoạt động</div>
-                                <div className={classes.devicedrow}>
+                        <div className={listdevice_style.deviceitem}>
+                            <div className={listdevice_style.devicename}>Trạng thái kết nối</div>
+                                <div className={listdevice_style.devicedrow}>
                                     <Dropdown options={optionsConnect} 
-                                       
-                                       onChange={(e)=>handleDropdownValue(e)} 
-                                       value={defaultOption} placeholder="Select an option" />
+                                    onChange={(e)=>handleDropdownValue(e)} 
+                                    value={defaultOption} placeholder="Select an option" />
                                         
                                 </div>
                         </div>
-
                     </div>
-                    <div className={classes.deviceitemseach}>
-                            <div className={classes.devicename}>Từ khoá</div>
-                            <div className={classes.searchinput}>
-                                    <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSeatch(e.target.value)}/>
-                                    <div className={classes.fi_search}>
-                                    <img src={fi_search} alt="" />
-                                    </div>
-                            </div>
+                    <div className={listdevice_style.deviceitemseach}>
+                        <div className={listdevice_style.devicename}>Từ khoá</div>
+                        <div className={listdevice_style.searchinput}>
+                                <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSeatch(e.target.value)}/>
+                                <div className={listdevice_style.fi_search}>
+                                <img src={fi_search} alt="" />
+                                </div>
                         </div>
+                    </div>
                 </div>
             </div>
-
-            <div className={classes.tablelistitem}>
-                    <div className={classes.devicetable}>
-                            <div className={classes.deviceitemname} style={{width:"103px"}}>
-                                <div className={classes.deviceitemnametitle}> Mã thiết bị </div>    
+            <div className={listdevice_style.tablelistitem}>
+                    <div className={listdevice_style.devicetable}>
+                            <div className={listdevice_style.deviceitemname} style={{width:"110px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}> Mã thiết bị </div>    
                             </div>
-                            <div className={classes.deviceitemname} style={{width:"99px"}}>
-                                <div className={classes.deviceitemnametitle}> Tên thiết bị </div>    
+                            <div className={listdevice_style.deviceitemname} style={{width:"150px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}> Tên thiết bị </div>    
                             </div>
-                            <div className={classes.deviceitemname} style={{width:"138px"}}>
-                                <div className={classes.deviceitemnametitle}> Địa chỉ IP </div>    
+                            <div className={listdevice_style.deviceitemname} style={{width:"145px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}> Địa chỉ IP </div>    
                             </div>
-                            <div className={classes.deviceitemname} style={{width:"171px"}}>
-                                <div className={classes.deviceitemnametitle}> Trạng thái hoạt động </div>    
+                            <div className={listdevice_style.deviceitemname} style={{width:"220px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}> Trạng thái hoạt động </div>    
                             </div>
-                            <div className={classes.deviceitemname} style={{width:"145px"}}>
-                                <div className={classes.deviceitemnametitle}> Trạng thái kết nối </div>    
+                            <div className={listdevice_style.deviceitemname} style={{width:"180px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}> Trạng thái kết nối </div>    
                             </div>
-                            <div className={classes.deviceitemname} style={{width:"268px"}}>
-                                <div className={classes.deviceitemnametitle}> Dịch vụ sử dụng </div>    
+                            <div className={listdevice_style.deviceitemname} style={{width:"450px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}> Dịch vụ sử dụng </div>    
                             </div>
-                            <div className={classes.deviceitemname} style={{width:"82px"}}>
-                                <div className={classes.deviceitemnametitle}>  </div>    
+                            <div className={listdevice_style.deviceitemname} style={{width:"82px"}}>
+                                <div className={listdevice_style.deviceitemnametitle}>  </div>    
                             </div> 
-                         
-                                <div className={classes.deviceitemnametitle}>  </div>    
+                                <div className={listdevice_style.deviceitemnametitle} style={{width:"110px"}} >  </div>    
                     
                         </div>
-
                         {
-                         dataEquiment.map ( (item:any,index:any)=>   
-                         
-                    <div className={classes.servicetablelist}key={index}>
-                        <div className={classes.deviceitemname} style={{width:"103px"}}>
-                            <div className={classes.deviceitemnametitleid}>{item.code} </div>    
+                        dataEquiment.map ( (item:any,index:any)=>   
+                    <div className={listdevice_style.servicetablelist}key={index}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"110px"}}>
+                            <div className={listdevice_style.deviceitemnametitleid}>{item.code} </div>    
                         </div>
-                        <div className={classes.deviceitemname} style={{width:"99px"}}>
-                            <div className={classes.deviceitemnametitleid}>{item.name}  </div>    
+                        <div className={listdevice_style.deviceitemname} style={{width:"150px"}}>
+                            <div className={listdevice_style.deviceitemnametitleid}>{item.name}  </div>    
                         </div>
-                        <div className={classes.deviceitemname} style={{width:"138px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"145px"}}>
                                 
-                             <div className={classes.deviceitemnametitleid}>{item.adress}  </div>  
-                          
+                            <div className={listdevice_style.deviceitemnametitleid}>{item.adress}  </div>  
                         </div>
-                        <div className={classes.deviceitemname} style={{width:"171px"}}>
-                            <div className={`${classes.deviceitemnametitleid} ${classes.id}`}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"220px"}}>
+                            <div className={`${listdevice_style.deviceitemnametitleid} ${listdevice_style.id}`}>
                                 
                                 {item.status=="Ngưng hoạt động"&&<ServiceWaitPoint/>}
                                 {item.status=="Hoạt động"&&<ServiceUsedPoint/>}
-                          </div>    
+                        </div>    
                         </div>
-                        <div className={classes.deviceitemname} style={{width:"145px"}}>
-                            <div className={`${classes.deviceitemnametitleid} ${classes.id}`}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"180px"}}>
+                            <div className={`${listdevice_style.deviceitemnametitleid} ${listdevice_style.id}`}>
                                 
                                 {item.connet == 'Mất kết nối' && <ServiceWaitPoint1/>}
-                              {item.connet == 'Kết nối' && <ServiceUsedPoint1/>}
-                          
-                          </div>    
+                            {item.connet == 'Kết nối' && <ServiceUsedPoint1/>}
+                        </div>    
                         </div>
-                        <div className={classes.deviceitemname} style={{width:"268px"}}>
-                                <div className={classes.deviceitemnametitleid}> 
-                                        {item.node}
-                                        {
-                                            showMore && <div className={classes.but}> Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt,
-                                            Khám tai mũi họng, Khám hô hấp, Khám tổng quát</div>
-                                        }
-                                            
-                                        {
-                                            !showMore && <><br /><div className={classes.button} onClick={() => setShowMore(!showMore)}> Xem thêm</div></>
-                                        } 
-                                            
-                                            
-                                                
-                                                </div>  
-
+                        <div className={listdevice_style.deviceitemname} style={{width:"450px"}}>
+                                <div className={listdevice_style.deviceitemnametitleid}> 
+                                    {item.node}
+                                    {
+                                        showMore && <div className={listdevice_style.but}> Khám tim mạch, Khám Sản - Phụ khoa, Khám răng hàm mặt,
+                                        Khám tai mũi họng, Khám hô hấp, Khám tổng quát</div>
+                                    }
+                                    {
+                                        !showMore && <><br /><div className={listdevice_style.button} onClick={() => setShowMore(!showMore)}> Xem thêm</div></>
+                                    } 
+                                </div>  
                         </div>
                         <Link to ="/device/detaildevice">
-                        <div className={classes.deviceitemname} style={{width:"82px"}}>
-                            <div className={classes.deviceitemlistnew}> Chi tiết  </div>    
+                        <div className={listdevice_style.deviceitemname} style={{width:"82px"}}>
+                            <div className={listdevice_style.deviceitemlistnew}> Chi tiết  </div>    
                         </div>
                         </Link>
                         <Link to ="/device/updatedevice">
-                        <div className={classes.deviceitemname}style={{width:"91px"}} >
-                            <div className={classes.deviceitemlistnew}>Cập nhật </div>    
+                        <div className={listdevice_style.deviceitemname}style={{width:"120px"}} >
+                            <div className={listdevice_style.deviceitemlistnew}>Cập nhật </div>    
                         </div>
                         </Link>
                     </div>
-
-                    
-                         )
-                    }
-
+                    )
+                }
             </div>
-
             <Link to= "/device/add-device">   
-                <div className={classes.add}>
-                        <div className={classes.adddevice}>
+                <div className={listdevice_style.add}>
+                        <div className={listdevice_style.adddevice}>
                                 <img src={plus} alt="" />  
                         </div>
-                        <div className={classes.devicetitlename}> Thêm thiết bị </div>
+                        <div className={listdevice_style.devicetitlename}> Thêm thiết bị </div>
                 </div>
             </Link>   
-            <div className={classes.chosepape}>
-
+            <div className={listdevice_style.chosepape}>
                 <Page/>
             </div>        
-
-            
         </div>
-
-        
-        
     )
 }
 
 const mapStateToProps = (state:any) =>{
     return {
-      dataTable:state.dataAlta
-  
-     
-        
-        
-        
+    dataTable:state.dataAlta
     }
-  }
-  
-  
-  
-  
-  const mapDispatchToProps = (dispatch:any) =>{
+}
+const mapDispatchToProps = (dispatch:any) =>{
     return {
-            fetchData: ()=>  dispatch(fetchData()),
-      
+        fetchData: ()=>  dispatch(fetchData()),
     }
-  }
-  
-  
-  
-  
+}
 export default connect(mapStateToProps,mapDispatchToProps)(Listdevice)
-  

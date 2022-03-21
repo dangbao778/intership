@@ -23,7 +23,7 @@ const Login =()=>{
                         
                         
                     </div>
-                    < Link to='/account'>
+                    < Link to='/dashboard'>
                         <div className={resetpass.sumit} > 
                             <p className={resetpass.confirm} >Xác nhận</p>
                         </div>

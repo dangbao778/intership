@@ -1,19 +1,7 @@
-import classes from "./Chartweek.module.css"
+import chartweek_style from "./Chartweek.module.css"
 import  drowdown from "../image/drowdown.svg"
-import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Legend,
-    Brush,
-    AreaChart,
-    Area,
-    ResponsiveContainer,
-  } from 'recharts';
-  import {useState} from "react";
+import {LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,Legend,Brush,AreaChart,Area,ResponsiveContainer,} from 'recharts';
+import {useState} from "react";
 
 
 function Chartweek(){
@@ -22,58 +10,48 @@ function Chartweek(){
     {
       name: '1',
       value:2700,
-    
     },
     {
       name: '2',
       value: 3500,
-      
     },
     {
       name: '3',
       value: 5800,
-      
     },
     {
       name: '4',
       value: 4221,
-     
     },
-   
-    
   ];
-      
-    
       return (    
-        <div className={classes.dashboadlisst}>
-            <div className={classes.monthchart}>    
-                <div className={classes.monthleft}>
-                    <div className={classes.monthtitle}>
-                        <span className={classes.charttitle} >Bảng thống kê theo ngày</span>
+        <div className={chartweek_style.dashboadlisst}>
+            <div className={chartweek_style.monthchart}>    
+                <div className={chartweek_style.monthleft}>
+                    <div className={chartweek_style.monthtitle}>
+                        <span className={chartweek_style.charttitle} >Bảng thống kê theo ngày</span>
                     </div>
-                    <div className={classes.monthtime}>
-                        <span className={classes.charttime}>Tháng 11/2021</span>
+                    <div className={chartweek_style.monthtime}>
+                        <span className={chartweek_style.charttime}>Tháng 11/2021</span>
                     </div>
                 </div>
-                <div className={classes.monthright}>
-      <span className={classes.chartitem}>Xem theo </span>
-      <div className={classes.chartlist}>
-        <div className={classes.chartday}
-           onMouseEnter={()=>setOpen(true)} onMouseLeave={()=>setOpen(false)}>
+                <div className={chartweek_style.monthright}>
+      <span className={chartweek_style.chartitem}>Xem theo </span>
+      <div className={chartweek_style.chartlist}>
+        <div className={chartweek_style.chartday}
+          onMouseEnter={()=>setOpen(true)} onMouseLeave={()=>setOpen(false)}>
           <p>Ngày</p>
           </div>
-            <img className={classes.drowdown} src={drowdown} alt="drowdown"></img>
-            { open &&     <div className={classes.listdrow}>
-              <div className={classes.chartmonth}>Tháng</div>
-              <div className={classes.chartweek}>Tuần</div>
+            <img className={chartweek_style.drowdown} src={drowdown} alt="drowdown"></img>
+            { open &&     <div className={chartweek_style.listdrow}>
+              <div className={chartweek_style.chartmonth}>Tháng</div>
+              <div className={chartweek_style.chartweek}>Tuần</div>
             </div>    
-}
+            }     
       </div>
-      
 </div>
-      
-            </div>
-          <div className={classes.chartmonth}>
+          </div>
+          <div className={chartweek_style.chartmonth}>
             <ResponsiveContainer width="100%" aspect={ 8 / 3.5}>
                   <AreaChart
                   width={500}
@@ -99,12 +77,7 @@ function Chartweek(){
                   </AreaChart>
           </ResponsiveContainer>
             </div>
-
         </div>
       )
-    
-
 }
-
 export default Chartweek;
-  

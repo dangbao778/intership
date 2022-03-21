@@ -1,4 +1,4 @@
-import classes from "./Detailservice.module.css"
+import detailservice from "./Detailservice.module.css"
 import Listitem from '../../Listitem'
 import Bellactive from "../../Bellactive";
 import Page from "../../Page";
@@ -20,18 +20,16 @@ import back1 from'../../image/back1.svg'
 function Detailservice({dataTable,fetchData}:any){
     useEffect(() => {
         fetchData();
-      }, []);
-      const [startDate, setStartDate] = useState<Date | null>(new Date());
-      const [search , setSearch] = useState('')
-      const ServiceWaitPoint = ()=>{
+    }, []);
+    const [startDate, setStartDate] = useState<Date | null>(new Date());
+    const [search , setSearch] = useState('')
+    const ServiceWaitPoint = ()=>{
         return (
                 <><span className="green">
-                  <img src={green} alt="green"></img>
-                  </span><span>Đã hoàn thành</span></>
+                <img src={green} alt="green"></img>
+                </span><span>Đã hoàn thành</span></>
         )
-    }  
-   
-    
+    } 
         const ServiceUsedPoint = ()=>{
         return (
                 <><span className="blue">
@@ -42,209 +40,181 @@ function Detailservice({dataTable,fetchData}:any){
         }  
         const ServiceUnactivePoint = ()=>{
             return (  <><span className="black">
-              
-              <img src={black} alt="black"></img>
-              </span><span>Vắng</span></>
-            
+            <img src={black} alt="black"></img>
+            </span><span>Vắng</span></>
             ) 
-      }
-      const data= dataTable.dateServiceDetail
-      const [dataServiceTable , setDataServiceTable] = useState(data)
-  
-
-      const options = [
+    }
+    const data= dataTable.dateServiceDetail
+    const [dataServiceTable , setDataServiceTable] = useState(data)
+    const options = [
         'Tất cả', 'Đã hoàn thành', 'Đang thực hiện','Vắng'
-      ];
-      
-     
-   const defaultOption = options[0];
-
-  
-
-
-
-
+    ];
+const defaultOption = options[0];
         const handleDropdownValue = (e: any)=>{
-            
-                if(e.value=='Đã hoàn thành'){
-                        const filterdata = data  .filter( (item:any)=> item.status == 'Đã hoàn thành')
-                        setDataServiceTable(filterdata)
-                }else if(e.value=='Đang thực hiện') {
-                        const filterdata = data  .filter((item:any) =>item.status == 'Đang thực hiện')
-                        setDataServiceTable(filterdata)
-                }else if(e.value=='Vắng') {
-                    const filterdata = data.filter((item:any) => item.status == 'Vắng')
+            if(e.value=='Đã hoàn thành'){
+                    const filterdata = data  .filter( (item:any)=> item.status == 'Đã hoàn thành')
                     setDataServiceTable(filterdata)
-                    }
-                
-                else{
-                    setDataServiceTable(data  )
+            }else if(e.value=='Đang thực hiện') {
+                    const filterdata = data  .filter((item:any) =>item.status == 'Đang thực hiện')
+                    setDataServiceTable(filterdata)
+            }else if(e.value=='Vắng') {
+                const filterdata = data.filter((item:any) => item.status == 'Vắng')
+                setDataServiceTable(filterdata)
                 }
-                 
-           }
+            else{
+                setDataServiceTable(data  )
+            }
+        }
     return(
-        <div className={classes.listservice}>
-            <Listitem/>
-        <div className={classes.listlevelright}>
-            <div className={classes.service}>
-                <div className={classes.serviceinfo}>
-                    <div className={classes.serviceinfolist}>
-                        <p className={classes.servicetitle}>
+        <div className={detailservice.listservice}>
+            {/* <Listitem/> */}
+        <div className={detailservice.listlevelright}>
+            <div className={detailservice.service}>
+                <div className={detailservice.serviceinfo}>
+                    <div className={detailservice.serviceinfolist}>
+                        <p className={detailservice.servicetitle}>
                             Dịch vụ
                         </p>
-                            <img src={levelgoto} alt="levelgoto" className={classes.servicegoto}></img>
+                            <img src={levelgoto} alt="levelgoto" className={detailservice.servicegoto}></img>
                     
-                        <p className={classes.servicetitle }>
+                        <p className={detailservice.servicetitle }>
                             Danh sách dịch vụ
                         </p>
-                        <img src={levelgoto} alt="levelgoto" className={classes.servicegoto}></img>
-                            <p className={classes.servicelist }>
+                        <img src={levelgoto} alt="levelgoto" className={detailservice.servicegoto}></img>
+                            <p className={detailservice.servicelist }>
                             Chi tiết
                             </p>
                     </div>
-                    <div className={classes.bell}>
+                    <div className={detailservice.bell}>
                         <Bellactive/>
                     </div>
                 </div>
-                <div className={classes.detailtitle}>
-                     Quản lý dịch vụ
+                <div className={detailservice.detailtitle}>
+                    Quản lý dịch vụ
                 </div>
-                <div className={classes.detail__container}>
-                    <div className={classes.detail__container__items}>
-                        <div className={classes.detail__item}>
-                            <div className={classes.detail__title}>
+                <div className={detailservice.detail__container}>
+                    <div className={detailservice.detail__container__items}>
+                        <div className={detailservice.detail__item}>
+                            <div className={detailservice.detail__title}>
                                 Thông tin dịch vụ
                             </div>
-                            <div className={classes.detail__items}>
-                                <div className={classes.title}>Mã dịch vụ: </div>
-                                <div className={classes.titlelist}>201</div>
+                            <div className={detailservice.detail__items}>
+                                <div className={detailservice.title}>Mã dịch vụ: </div>
+                                <div className={detailservice.titlelist}>201</div>
                             </div>
-                            <div className={classes.detail__items}>
-                                <div className={classes.title}>Tên dịch vụ: </div>
-                                <div className={classes.titlelist}>Chuyên các bệnh lý về tim</div>
+                            <div className={detailservice.detail__items}>
+                                <div className={detailservice.title}>Tên dịch vụ: </div>
+                                <div className={detailservice.titlelist}>Chuyên các bệnh lý về tim</div>
                             </div>
-                            <div className={classes.detail__items}>
-                                <div className={classes.title}>Mô tả:</div>
-                                <div className={classes.titlelist}>Chuyên các bệnh lý về tim</div>
+                            <div className={detailservice.detail__items}>
+                                <div className={detailservice.title}>Mô tả:</div>
+                                <div className={detailservice.titlelist}>Chuyên các bệnh lý về tim</div>
                             </div>
                         </div>
-
-                        <div className={classes.detail__item}>
-                            <div className={classes.detail__title} style={{marginTop:"13px"}}>
+                        <div className={detailservice.detail__item}>
+                            <div className={detailservice.detail__title} style={{marginTop:"13px"}}>
                                 Quy tắc cấp số
                             </div>
-                            <div className={classes.detail__items}>
-                                <div className={classes.title}>Tăng tự động:  </div>
-                                <div className={classes.items__inputs}>
+                            <div className={detailservice.detail__items}>
+                                <div className={detailservice.title}>Tăng tự động:  </div>
+                                <div className={detailservice.items__inputs}>
                                     <input type="text" onChange={ e=>'value'} value='0001' />
-                                    <span className={classes.next}>đến</span> 
+                                    <span className={detailservice.next}>đến</span> 
                                     <input type="text" onChange={ e=>'value'}  value='9999'  />
                                 </div>
                             </div>
-                            <div className={classes.detail__items}>
-                                <div className={classes.title}>Prefix:</div>
-                                <div className={classes.items__inputs}> 
+                            <div className={detailservice.detail__items}>
+                                <div className={detailservice.title}>Prefix:</div>
+                                <div className={detailservice.items__inputs}> 
                                     <input type="text" className='prefix'  value='0001' onChange={ e=>'value'} />
                                 </div>
                             </div>
-                            <div className={classes.detail__items1}>
+                            <div className={detailservice.detail__items1}>
                                 Reset mỗi ngày
                             </div>
-                            <div className={classes.example}>
+                            <div className={detailservice.example}>
                                 Ví dụ: 201-2001
                             </div>
                         </div>
                     </div>
-
-                    <div className={classes.detail__container__table}>
-                    <div className={classes.servicedropdown}>
-                            <div className={classes.levelitem}>
-                                    <div className={classes.levelname}>Trạng thái</div>
-                                    <div className={classes.leveldrow}>
+                    <div className={detailservice.detail__container__table}>
+                    <div className={detailservice.servicedropdown}>
+                            <div className={detailservice.levelitem}>
+                                    <div className={detailservice.levelname}>Trạng thái</div>
+                                    <div className={detailservice.leveldrow}>
                                     <Dropdown options={options} 
-                                       
-                                       onChange={(e)=>handleDropdownValue(e)} 
-                                       value={defaultOption} placeholder="Select an option" />
+                                    onChange={(e)=>handleDropdownValue(e)} 
+                                    value={defaultOption} placeholder="Select an option" />
                                         
                                     </div>
                             </div>
-
-                            <div className={classes.levelitem}>
-                                    <div className={classes.levelname}>Chọn thời gian</div>
-                                    <div className={classes.leveldrowcalendar}>
-                                  
+                            <div className={detailservice.levelitem}>
+                                    <div className={detailservice.levelname}>Chọn thời gian</div>
+                                    <div className={detailservice.leveldrowcalendar}>
                                     <DatePicker 
                                     selected={startDate} onChange={(date) => setStartDate(date)} />
-                                        <img src={goright} alt="goright" className={classes.goright}></img>    
+                                        <img src={goright} alt="goright" className={detailservice.goright}></img>    
                                     <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                                     </div>
                             </div>
-
-                              <div className={classes.levelitemseach}></div>
-                            
-                            <div className={classes.levelitem}>
-                                <div className={classes.levelname}>Từ khoá</div>
-                                    <div className={classes.searchinput}>
+                            <div className={detailservice.levelitemseach}></div>
+                            <div className={detailservice.levelitem}>
+                                <div className={detailservice.levelname}>Từ khoá</div>
+                                    <div className={detailservice.searchinput}>
                                         <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSearch(e.target.value)}/>
-                                        <div className={classes.fi_search}>
+                                        <div className={detailservice.fi_search}>
                                         <img src={fi_search} alt="" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div className={classes.tablelistitem}>
-                            <div className={classes.leveltable}>
-                                <div className={classes.levelitemname} style={{width:"334px"}}>
-                                    <p className={classes.levelitemnametitle}> Số thứ tự</p>    
+                        <div className={detailservice.tablelistitem}>
+                            <div className={detailservice.leveltable}>
+                                <div className={detailservice.levelitemname} style={{width:"370px"}}>
+                                    <p className={detailservice.levelitemnametitle}> Số thứ tự</p>    
                                 </div>
-                                <div className={classes.levelitemname} style={{width:"327px"}}>
-                                    <p className={classes.levelitemnametitle}> Trạng thái </p>    
+                                <div className={detailservice.levelitemname} style={{width:"405px"}}>
+                                    <p className={detailservice.levelitemnametitle}> Trạng thái </p>    
                                 </div>
                             </div>
                             
                             {
-                             dataServiceTable.map ( (item:any,index:any)=> 
-                            <div className={classes.leveltablelist} key={index} >
-                                 <div className={classes.serviceitemname} style={{width:"341px"}}>
-                                        <p className={classes.serviceitemnametitleid}>{item.number} </p>    
-                                 </div>
-                                <div className={classes.levelitemnameid} style={{width:"333px"}}>
-                                    <p className={`${classes.levelitemnametitleid} ${classes.id}`}>  
+                            dataServiceTable.map ( (item:any,index:any)=> 
+                            <div className={detailservice.leveltablelist} key={index} >
+                                <div className={detailservice.serviceitemname} style={{width:"366px"}}>
+                                        <p className={detailservice.serviceitemnametitleid}>{item.number} </p>    
+                                </div>
+                                <div className={detailservice.levelitemnameid} style={{width:"410px"}}>
+                                    <p className={`${detailservice.levelitemnametitleid} ${detailservice.id}`}>  
                                         {item.status == 'Đã hoàn thành' && <ServiceWaitPoint/>}
                                         {item.status == 'Vắng' && <ServiceUnactivePoint/>}
                                         {item.status == 'Đang thực hiện' && <ServiceUsedPoint/>}
                                     </p>       
                                 </div>
                             </div>
-                                          )}
-
+                                        )}
                         </div>
-                        <div className={classes.chosepape}>
-
+                        <div className={detailservice.chosepape}>
                             <Page/>
                         </div> 
                         
                     </div>
-                    <div className={classes.detail__container__update}>
+                    <div className={detailservice.detail__container__update}>
                         <Link to="/listservice">
-                             <div className={classes.eidt}>
+                            <div className={detailservice.eidt}>
                                     <div className="ServiceAddIMG">
                                             <img src={edit} alt="" />  
                                     </div>
-                                    <div className={classes.add}>Cập nhập danh sách</div>
+                                    <div className={detailservice.add}>Cập nhập danh sách</div>
                                 </div></Link> 
-
-                              <Link to="/service">
-                                    <div className={classes.back1}>
+                            <Link to="/service">
+                                    <div className={detailservice.back1}>
                                         <div className="ServiceAddIMG">
                                                 <img src={back1} alt="" />  
                                         </div>
-                                        <div className={classes.add}>Quay lại</div>
+                                        <div className={detailservice.add}>Quay lại</div>
                                 </div></Link> 
-
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -253,26 +223,12 @@ function Detailservice({dataTable,fetchData}:any){
 }
 const mapStateToProps = (state:any) =>{
     return {
-      dataTable:state.dataAlta
-  
-     
-        
-        
-        
+    dataTable:state.dataAlta
     }
-  }
-  
-  
-  
-  
-  const mapDispatchToProps = (dispatch:any) =>{
+}
+const mapDispatchToProps = (dispatch:any) =>{
     return {
-            fetchData: ()=>  dispatch(fetchData()),
-      
+        fetchData: ()=>  dispatch(fetchData()),
     }
-  }
-  
-  
-  
-  
+}
 export default connect(mapStateToProps,mapDispatchToProps)(Detailservice);

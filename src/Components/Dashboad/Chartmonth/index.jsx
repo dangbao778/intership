@@ -1,18 +1,7 @@
-import classes from "./Chartmonth.module.css"
+import chartmonth_style from "./Chartmonth.module.css"
 import Dropdown from 'react-dropdown';
-
-import {
-   
-    XAxis,
-    YAxis,
-   
-    Tooltip,
-  
-    AreaChart,
-    Area,
-    ResponsiveContainer,
-  } from 'recharts';
-  import {useState} from "react";
+import {XAxis,YAxis,Tooltip,AreaChart,Area,ResponsiveContainer,} from 'recharts';
+import {useState} from "react";
 
 
 function Chartmonth(){
@@ -21,173 +10,135 @@ function Chartmonth(){
     {
       name: '1',
       value:2700,
-    
     },
     {
       name: '',
       value: 4500,
-      
     },
     {
       name: '13',
       value: 3500,
-      
     },
     {
       name: '',
       value: 5000,
-      
     },
     {
       name: '19',
       value: 4221,
-     
     },
     {
       name: '31',
       value: 3980,
-     
     },
-    
   ];
 
   const dataweek = [
     {
       name: '1',
       value:2700,
-    
     },
     {
       name: '2',
       value: 3500,
-      
     },
     {
       name: '3',
       value: 5800,
-      
     },
     {
       name: '4',
       value: 4221,
-     
     },
-   
-    
   ];
 
   const datamonth = [
     {
       name: '1',
       value:2700,
-    
     },
     {
       name: '2',
       value: 4000,
-      
     },
     {
       name: '3',
       value: 4700,
-      
     },
     {
       name: '4',
       value: 4100,
-     
     },
     {
       name: '5',
       value: 3400,
-     
     },
     {
       name: '6',
       value: 3700,
-     
     },
     {
       name: '7',
       value: 3500,
-     
     },
     {
       name: '8',
       value: 4070,
-     
     },
     {
       name: '9',
       value: 3900,
-     
     },
     {
       name: '10',
       value: 4000,
-     
     },
     {
       name: '11',
       value: 4221,
-     
     },
     {
       name: '12',
       value: 3800,
-     
     },
-   
-    
   ];
   
-     const [dataChart,setDataChart] = useState(data)
-
+    const [dataChart,setDataChart] = useState(data)
     const options = [
         'Ngày', 'Tuần', 'Tháng'
       ];
-
       const handleDropdownValue = (e)=>{
-            
-           if(e.value === 'Ngày'){
-             setDataChart(data)
-
-           }else if(e.value === 'Tuần'){
-              setDataChart(dataweek)
-           }else if(e.value === 'Tháng'){
-             setDataChart(datamonth)
-           }
-            
+          if(e.value === 'Ngày'){
+            setDataChart(data)
+          }else if(e.value === 'Tuần'){
+            setDataChart(dataweek)
+          }else if(e.value === 'Tháng'){
+            setDataChart(datamonth)
+          }
       }
       const defaultOption = options[0];
-
-
       return (    
-        <div className={classes.dashboadlist}>
-           <div className={classes.monthleft}>
-                <div className={classes.monthtitle}>
-                    <span className={classes.charttitle}>
-                         Bảng thống kê theo tháng
+        <div className={chartmonth_style.dashboadlist}>
+          <div className={chartmonth_style.monthleft}>
+                <div className={chartmonth_style.monthtitle}>
+                    <span className={chartmonth_style.charttitle}>
+                        Bảng thống kê theo tháng
                     </span>
-                    <span className={classes.charttime}>
+                    <span className={chartmonth_style.charttime}>
                         Tháng 11/2021
                     </span>
                 </div>
-
-                <div className={classes.monthright}>
-                    <p className={classes.chartday}>
-                            Xem theo
+                <div className={chartmonth_style.monthright}>
+                    <p className={chartmonth_style.chartday}>
+                      Xem theo
                     </p>
-         
-                             <Dropdown options={options} 
+                        <Dropdown options={options} 
                         className='chartDropdown'
                         onChange={(e)=>handleDropdownValue(e)} 
                         value={defaultOption} placeholder="Select an option" />
-                 </div>
-                    
+                </div>
             </div>
-      
-          <div className={classes.chartmonth}>
+          <div className={chartmonth_style.chartmonth}>
               <ResponsiveContainer width="100%" aspect={ 7 / 3}>
                     <AreaChart
                     width={500}
@@ -213,11 +164,8 @@ function Chartmonth(){
                   </AreaChart>
             </ResponsiveContainer>
             </div>
-
         </div>
       )
-    
-
 }
 
 export default Chartmonth;

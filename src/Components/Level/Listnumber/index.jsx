@@ -4,8 +4,8 @@ import logo_level from "../../image/logo_level.png"
 function Listnumber(){
     return(
     <div className={classes.dashboadleft}>
-          <img src ={alta} alt='alta ' className={classes.alta} ></img> 
-          <div className={classes.list}>  
+        <img src ={alta} alt='alta ' className={classes.alta} ></img> 
+        <div className={classes.list}>  
             <ul>
                 <li className={classes.listtitle}>
                     <div className={classes.listitem } >
@@ -16,7 +16,6 @@ function Listnumber(){
             </ul>
             </div>
         </div>
-  
     )
 }
 

@@ -1,6 +1,4 @@
-
 import classes from '../Addlevel/Addlevel.module.css'
-
 import Listitem from '../../Listitem'
 import NewLevel from './Newlevel'
 function Addlevel()

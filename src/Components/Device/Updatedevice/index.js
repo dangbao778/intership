@@ -1,4 +1,4 @@
-import classes from "./Updatedevice.module.css"
+import updatedevice_style from "./Updatedevice.module.css"
 import Listitem from '../../Listitem'
 import Levelgoto from "../../image/gotoright.svg";
 import Bellactive from "../../Bellactive";
@@ -11,174 +11,168 @@ function Updatedevice(){
 
     const optionsdevice = [
         'Chọn loại thiết bị','Kiosk ','Display counter'
-      ];
-      const sumitdevice =(e)=>{
-          console.log(e.value)
-      }
-      const defaultOptiondevice = optionsdevice[0];
+    ];
+    const sumitdevice =(e)=>{
+        console.log(e.value)
+    }
+    const defaultOptiondevice = optionsdevice[0];
     return(
-        <div className={classes.listdevice}>
+        <div className={updatedevice_style.listdevice}>
         <Listitem/>
-            <div className={classes.listlevelright}>
-                <div className={classes.update}>
-                    <div className={classes.updateinfo}>
-                        <div className={classes.updateinfolist}>
-                            <p className={classes.updatetitle}>
+            <div className={updatedevice_style.listlevelright}>
+                <div className={updatedevice_style.update}>
+                    <div className={updatedevice_style.updateinfo}>
+                        <div className={updatedevice_style.updateinfolist}>
+                            <p className={updatedevice_style.updatetitle}>
                                 Thiết bị
                             </p>
-                            <img src={Levelgoto} alt="levelgoto" className={classes.levelgoto}></img>
-               
-                            <p className={classes.updatetitle }>
+                            <img src={Levelgoto} alt="levelgoto" className={updatedevice_style.levelgoto}></img>
+                            <Link to='/device'>
+                            <p className={updatedevice_style.updatetitle }>
                                 Danh sách thiết bị
                             </p>
-                                <img src={Levelgoto} alt="levelgoto" className={classes.levelgoto}></img>
-                            <p className={classes.updatelist }>
-                                Thêm thiết bị
+                            </Link>
+                                <img src={Levelgoto} alt="levelgoto" className={updatedevice_style.levelgoto}></img>
+                            <p className={updatedevice_style.updatelist }>
+                                Cập nhật thiết bị
                             </p>
                         </div>
-                        <div className={classes.bell}>
+                        <div className={updatedevice_style.bell}>
                             <Bellactive/>
                         </div>
                     </div>
 
-                    <div className={classes.updatecontainer}>
-                        <div className={classes.updatelisttitle}>
-                            Quản lý tài khoản
+                    <div className={updatedevice_style.updatecontainer}>
+                        <div className={updatedevice_style.updatelisttitle}>
+                            Quản lý thiết bị
                         </div>
-                        <div className={classes.updatelistitem}>
-                            <div className={classes.listitem}>
-                                <div className={classes.updatelistinformation}>
-                                    Thông tin tài khoản
+                        <div className={updatedevice_style.updatelistitem}>
+                            <div className={updatedevice_style.listitem}>
+                                <div className={updatedevice_style.updatelistinformation}>
+                                    Thông tin thiết bị
                                 </div>
-                                <div className={classes.listinformation}>
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}>Mã thiết bị:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                <div className={updatedevice_style.listinformation}>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}>Mã thiết bị:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
                                         
-                                        <input className={classes.titlecontnet} type="text"  name="" placeholder="KIO_01"/>
+                                        <input className={updatedevice_style.titlecontnet} type="text"  name="" placeholder="KIO_01"/>
                                     </div>
 
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}>Loại thiết bị:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}>Loại thiết bị:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
-                                        
-                                        <div className={classes.updatedrow}>
+                                        <div className={updatedevice_style.updatedrow}>
                                             <Dropdown options={optionsdevice}  
                                             onChange={(e)=>sumitdevice(e)} 
                                             value={defaultOptiondevice} placeholder="Select an option" />
-                            </div>
+                                        </div>
                                     </div>
-
-
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}>Tên thiết bị:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}>Tên thiết bị:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
                                         
-                                        <input className={classes.titlecontnet} type="text"  name="" placeholder="Kiosk"/>
+                                        <input className={updatedevice_style.titlecontnet} type="text"  name="" placeholder="Kiosk"/>
                                     </div>
 
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}>Tên đăng nhập:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}>Tên đăng nhập:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
                                         
-                                        <input className={classes.titlecontnet} type="text"  name="" placeholder="Linhkyo011"/>
+                                        <input className={updatedevice_style.titlecontnet} type="text"  name="" placeholder="Linhkyo011"/>
                                     </div>
 
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}> Địa chỉ IP:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}> Địa chỉ IP:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
                                         
-                                        <input className={classes.titlecontnet} type="text"  name="" placeholder="128.172.308"/>
+                                        <input className={updatedevice_style.titlecontnet} type="text"  name="" placeholder="128.172.308"/>
                                     </div>
 
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}>Mật khẩu:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}>Mật khẩu:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
                                         
-                                        <input className={classes.titlecontnet} type="text"  name="" placeholder="CMS"/>
+                                        <input className={updatedevice_style.titlecontnet} type="text"  name="" placeholder="CMS"/>
                                     </div>
 
-                                    <div className={classes.updatename}>
-                                        <p className={classes.updateid}>Dịch vụ sử dụng:
-                                        <img src={star} alt='star' className={classes.starid}></img>
+                                    <div className={updatedevice_style.updatename}>
+                                        <p className={updatedevice_style.updateid}>Dịch vụ sử dụng:
+                                        <img src={star} alt='star' className={updatedevice_style.starid}></img>
                                         </p>
-                                        
-                                       <div className={classes.list}>
-                                            <div className={classes.item}>
-                                            <p className={classes.updatetitle__item}>
+                                    <div className={updatedevice_style.list}>
+                                            <div className={updatedevice_style.item}>
+                                            <p className={updatedevice_style.updatetitle__item}>
                                                 
                                                     Khám tim mạch
                                                 </p>
-                                                <img src={delefi} alt='star' className={classes.delefi}></img>
+                                                <img src={delefi} alt='star' className={updatedevice_style.delefi}></img>
                                             </div>
-                                            <div className={classes.item}>
-                                            <p className={classes.updatetitle__item}>
+                                            <div className={updatedevice_style.item}>
+                                            <p className={updatedevice_style.updatetitle__item}>
                                                 
                                                     Khám sản phụ khoa
                                                 </p>
-                                                <img src={delefi} alt='star' className={classes.delefi}></img>
+                                                <img src={delefi} alt='star' className={updatedevice_style.delefi}></img>
                                             </div>
-                                            <div className={classes.item}>
-                                            <p className={classes.updatetitle__item}>
+                                            <div className={updatedevice_style.item}>
+                                            <p className={updatedevice_style.updatetitle__item}>
                                                 
                                                     Khám răng hàm mặt
                                                 </p>
-                                                <img src={delefi} alt='star' className={classes.delefi}></img>
+                                                <img src={delefi} alt='star' className={updatedevice_style.delefi}></img>
                                             </div>
-
-                                            <div className={classes.item}>
-                                            <p className={classes.updatetitle__item}>
+                                            <div className={updatedevice_style.item}>
+                                            <p className={updatedevice_style.updatetitle__item}>
                                                 
                                                     Khám tai mũi họng
                                                 </p>
-                                                <img src={delefi} alt='star' className={classes.delefi}></img>
+                                                <img src={delefi} alt='star' className={updatedevice_style.delefi}></img>
                                             </div>
-
-                                            <div className={classes.item}>
-                                            <p className={classes.updatetitle__item}>
+                                            <div className={updatedevice_style.item}>
+                                            <p className={updatedevice_style.updatetitle__item}>
                                                 
                                                     Khám hô hấp
                                                 </p>
-                                                <img src={delefi} alt='star' className={classes.delefi}></img>
+                                                <img src={delefi} alt='star' className={updatedevice_style.delefi}></img>
                                             </div>
 
-                                            <div className={classes.item}>
-                                                <p className={classes.updatetitle__item}>
+                                            <div className={updatedevice_style.item}>
+                                                <p className={updatedevice_style.updatetitle__item}>
                                                 
                                                     Khám tổng quát
                                                 </p>
-                                                <img src={delefi} alt='star' className={classes.delefi}></img>
+                                                <img src={delefi} alt='star' className={updatedevice_style.delefi}></img>
                                             </div>
-                                       </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                                
                             </div>
-                            <div className={classes.updatenameitem}>
-                                    <img src={star} alt='star' className={classes.star}></img>
+                            <div className={updatedevice_style.updatenameitem}>
+                                    <img src={star} alt='star' className={updatedevice_style.star}></img>
                                     <p> Là trường thông tin bắt buộc</p>
-                                </div>
+                            </div>
                         </div>
-
-                        <div className={classes.userbutton}>
+                        <div className={updatedevice_style.userbutton}>
                             <Link to ='/device'>
-                            <div className={classes.cannel}>
-                                <div className={classes.canneltitle}>Hủy bỏ  </div>
+                            <div className={updatedevice_style.cannel}>
+                                <div className={updatedevice_style.canneltitle}>Hủy bỏ</div>
                             </div>
                             </Link>
-                            <div className={classes.more}>
-                                <div className={classes.moretitle}>Thêm  </div>
-                            </div>
+                            <Link to='/device'>
+                                <div className={updatedevice_style.more}>
+                                    <div className={updatedevice_style.moretitle}>Cập nhật</div>
+                                </div>
+                            </Link>
+                            
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>  

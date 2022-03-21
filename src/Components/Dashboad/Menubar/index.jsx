@@ -1,5 +1,5 @@
 import {useState} from "react";
-import classes from "./Menubar.module.css"
+import menudashboard from "./Menubar.module.css"
 import Bellactive from "../../Bellactive";
 import pencentblue from "../../image/pencentblue.png"
 import pencentgreen from "../../image/pencentgreen.png"
@@ -13,117 +13,102 @@ function Menubar(){
         const onChange = newDate => {
         console.log(`New date selected - ${newDate.toString()}`);
         setDate(newDate);
-      };
+    };
     //   window.process = {
     //     env: {
     //       NODE_ENV: 'development',
     //    },
     //  };
-
     return(
-        
-        <div className={classes.dashboadright}>
-            <div className={classes.bell}>
+        <div className={menudashboard.dashboadright}>
+            <div className={menudashboard.bell}>
                 <Bellactive/>
             </div>
-                <p className={classes.title}>Tổng quan</p>            
-
-                <div className={classes.listcolurm}>
-                    <div className={classes.listdevice}>
-                        <div className={classes.listdeviceleft}>
-                            <img src={pencentorange} alt="pencentorange" className={classes.pencentorange}></img>
-                            <div className={classes.listdevicemiddle}>
-                                <p className={classes.number}>4.221</p>
-                                <div className={classes.listdevicebottom}>
-                                    <img src={device_orange} alt="device_orange" className={classes.pencentimg}></img>
-                                    <p className={classes.listtitlebottom}>Thiết bị</p>
-                                </div>
+            <p className={menudashboard.title}>Tổng quan</p>            
+            <div className={menudashboard.listcolurm}>
+                <div className={menudashboard.listdevice}>
+                    <div className={menudashboard.listdeviceleft}>
+                        <img src={pencentorange} alt="pencentorange" className={menudashboard.pencentorange}></img>
+                        <div className={menudashboard.listdevicemiddle}>
+                            <p className={menudashboard.number}>4.221</p>
+                            <div className={menudashboard.listdevicebottom}>
+                                <img src={device_orange} alt="device_orange" className={menudashboard.pencentimg}></img>
+                                <p className={menudashboard.listtitlebottom}>Thiết bị</p>
                             </div>
                         </div>
-                        <div className={classes.listdeviceright}>
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"orange"}} >.</div>
-                                <div className={classes.rowmiddle} >Đang hoạt động</div>
-                                <div className={classes.rowright} >3.799</div>
-                            </div>
-
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"black"}}>.</div>
-                                <div className={classes.rowmiddle} >Ngưng hoạt động</div>
-                                <div className={classes.rowright} >422</div>
-                            </div>
-                        </div>
-                        
-                        
                     </div>
-                    <div className={classes.listdevice}>
-                        <div className={classes.listdeviceleft}>
-                            <img src={pencentblue} alt="pencentblue" className={classes.pencentblue}></img>
-                            <div className={classes.listdevicemiddle}>
-                                <p className={classes.number}>276</p>
-                                <div className={classes.listdevicebottom}>
-                                    <img src={service_blue} alt="service_blue" className={classes.pencentimg}></img>
-                                    <p className={classes.listtitlebottom} style={{color:"blue"}}>Dịch vụ</p>
-                                </div>
-                            </div>
+                    <div className={menudashboard.listdeviceright}>
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"orange"}} >.</div>
+                            <div className={menudashboard.rowmiddle} >Đang hoạt động</div>
+                            <div className={menudashboard.rowright} >3.799</div>
                         </div>
-                        <div className={classes.listdeviceright}>
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"blue"}}>.</div>
-                                <div className={classes.rowmiddle} >Đang hoạt động</div>
-                                <div className={classes.rowright} >210</div>
-                            </div>
-
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"black"}}>.</div>
-                                <div className={classes.rowmiddle} >Ngưng hoạt động</div>
-                                <div className={classes.rowright} >66</div>
-                            </div>
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"black"}}>.</div>
+                            <div className={menudashboard.rowmiddle} >Ngưng hoạt động</div>
+                            <div className={menudashboard.rowright} >422</div>
                         </div>
-                        
-                        
-                    </div>
-                    <div className={classes.listdevice}>
-                        <div className={classes.listdeviceleft}>
-                            <img src={pencentgreen} alt="pencentgreen" className={classes.pencentgreen}></img>
-                            <div className={classes.listdevicemiddle}>
-                                <p className={classes.number}>4.221</p>
-                                <div className={classes.listdevicebottom}>
-                                    <img src={level_green} alt="level_green" className={classes.pencentimg}></img>
-                                    <p className={classes.listtitlebottom} style={{color:"green"}}>Cấp số</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={classes.listdeviceright}>
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"green"}}>.</div>
-                                <div className={classes.rowmiddle} >Đã sử dụng  </div>
-                                <div className={classes.rowright} >3.721</div>
-                            </div>
-
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"pink"}}>.</div>
-                                <div className={classes.rowmiddle} >Đang chờ</div>
-                                <div className={classes.rowright} >486</div>
-                            </div>
-
-                            
-                            <div className={classes.listdevicertop}>
-                                <div className={classes.rowleft} style={{color:"#F178B6"}}>.</div>
-                                <div className={classes.rowmiddle} >Bỏ qua</div>
-                                <div className={classes.rowright} >32</div>
-                            </div>
-                        </div>
-                        
-                        
                     </div>
                 </div>
-                <div className={classes.calendar}>
-                <DatePicker className="Datapicker" onChange={onChange} selected={date} />
+                <div className={menudashboard.listdevice}>
+                    <div className={menudashboard.listdeviceleft}>
+                        <img src={pencentblue} alt="pencentblue" className={menudashboard.pencentblue}></img>
+                        <div className={menudashboard.listdevicemiddle}>
+                            <p className={menudashboard.number}>276</p>
+                            <div className={menudashboard.listdevicebottom}>
+                                <img src={service_blue} alt="service_blue" className={menudashboard.pencentimg}></img>
+                                <p className={menudashboard.listtitlebottom} style={{color:"blue"}}>Dịch vụ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={menudashboard.listdeviceright}>
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"blue"}}>.</div>
+                            <div className={menudashboard.rowmiddle} >Đang hoạt động</div>
+                            <div className={menudashboard.rowright} >210</div>
+                        </div>
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"black"}}>.</div>
+                            <div className={menudashboard.rowmiddle} >Ngưng hoạt động</div>
+                            <div className={menudashboard.rowright} >66</div>
+                        </div>
+                    </div>
+                </div>
+                <div className={menudashboard.listdevice}>
+                    <div className={menudashboard.listdeviceleft}>
+                        <img src={pencentgreen} alt="pencentgreen" className={menudashboard.pencentgreen}></img>
+                        <div className={menudashboard.listdevicemiddle}>
+                            <p className={menudashboard.number}>4.221</p>
+                            <div className={menudashboard.listdevicebottom}>
+                                <img src={level_green} alt="level_green" className={menudashboard.pencentimg}></img>
+                                <p className={menudashboard.listtitlebottom} style={{color:"green"}}>Cấp số</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={menudashboard.listdeviceright}>
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"green"}}>.</div>
+                            <div className={menudashboard.rowmiddle} >Đã sử dụng  </div>
+                            <div className={menudashboard.rowright} >3.721</div>
+                        </div>
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"pink"}}>.</div>
+                            <div className={menudashboard.rowmiddle} >Đang chờ</div>
+                            <div className={menudashboard.rowright} >486</div>
+                        </div>
+                        
+                        <div className={menudashboard.listdevicertop}>
+                            <div className={menudashboard.rowleft} style={{color:"#F178B6"}}>.</div>
+                            <div className={menudashboard.rowmiddle} >Bỏ qua</div>
+                            <div className={menudashboard.rowright} >32</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={menudashboard.calendar}>
+            <DatePicker className="Datapicker" onChange={onChange} selected={date} />
             </div>
         </div>
     )
-
 }
-
 export default Menubar;

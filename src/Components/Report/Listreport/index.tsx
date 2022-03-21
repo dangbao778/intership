@@ -1,4 +1,3 @@
-
 import Bellactive from "../../Bellactive";
 import './Listreport.css'
 import {Link} from 'react-router-dom';
@@ -17,80 +16,42 @@ import black from '../../image/black.svg'
 import dow from '../../image/dow.svg'
 function Listreport({dataTable,fetchData }:any){
     useEffect(() => {
-        
         fetchData()
-        
-    
-    
     },[])
     const [startDate, setStartDate] = useState<Date | null>(new Date());
-   
-
-    
     const data = dataTable.dataReport
-
     const [ dataReport , setDataReport] = useState(data)
-
-
-
-
     const ServiceWaitPoint = ()=>{
         return (
-                <><span className="blue">
-                  <img src={blue}></img>
-                  </span><span>Đang chờ</span></>
+            <><span className="blue">
+            <img src={blue}></img>
+            </span><span>Đang chờ</span></>
         )
-    }  
-    
-    
+    } 
     const ServiceUsedPoint = ()=>{
     return (
             <><span className="black">
                 <img src={black} ></img>
-                
-              </span><span>Đã sử dụng</span></>
-    )
+            </span><span>Đã sử dụng</span></>
+        )
     }  
-    
-    
     const ServiceUnactivePoint = ()=>{
-          return (  <><span className="red">
-            
+        return (  <><span className="red">    
             <img src={red}></img>
             </span><span>Bỏ qua</span></>
-          
-          ) 
+        ) 
     }
-
-
-
-
-
-
-
     const options = [
         'Tất cả', '2040001', '2060001','2050002'
-      ];
-
-     
-   const defaultOption = options[0];
-
-
-   const optionsServiceName = [
-        
-      'Tất cả' , 'Khám tim mạch','Khám mắt','Khám tổng quát'
-
-            
-           
-   ]
-   const optionsTime = ['Tất cả' , '07:10  01/10/2021','07:15  01/10/2021','07:28  01/10/2021']
-  
-   const optionsState = ['Tất cả' , 'Đang chờ','Đã sử dụng','Bỏ qua']
-
-   const optionsProduct = ['Tất cả' , 'Kiosk','Hệ thống']
-
-   const handleDropdownValue = (e:any)=>{
-            
+    ];
+    const defaultOption = options[0];
+    const optionsServiceName = [
+    'Tất cả' , 'Khám tim mạch','Khám mắt','Khám tổng quát'
+    ]
+    const optionsTime = ['Tất cả' , '07:10  01/10/2021','07:15  01/10/2021','07:28  01/10/2021']
+    const optionsState = ['Tất cả' , 'Đang chờ','Đã sử dụng','Bỏ qua']
+    const optionsProduct = ['Tất cả' , 'Kiosk','Hệ thống']
+    const handleDropdownValue = (e:any)=>{
     if(e.value == 'Khám tim mạch'){
         const filterdata = data.filter( (item:any )=> item.service == 'Khám tim mạch')
         setDataReport(filterdata)
@@ -119,16 +80,10 @@ function Listreport({dataTable,fetchData }:any){
         const filterdata = data.filter(  (item:any )=> item.source== 'Hệ thống')
         setDataReport(filterdata)
     }
-
-
     else{
         setDataReport(data)
     }
-    
-     
 }
-
-
     return(
         <div className='report'>
             <div className='reportinfo'>
@@ -136,13 +91,10 @@ function Listreport({dataTable,fetchData }:any){
                     <p className='reporttitle'>
                         Báo cáo
                     </p>
-                    
                     <img src={reportgoto} alt="reportgoto" className='reportgoto'></img>
-               
                     <p className='reportlist '>
                         Lập báo cáo
                     </p>
-                    
                 </div>
                 <div className='bell'>
                     <Bellactive/>
@@ -163,24 +115,18 @@ function Listreport({dataTable,fetchData }:any){
                     <div className='listreport'>
                         <div className='reportlistdrow'>
                             <div className="reportitem ">
-
                             <Dropdown options={options}             
                                 onChange={(e)=>handleDropdownValue(e)} 
                                 value={defaultOption} placeholder="Select an option" />
-
                                 <span>Số thứ tự</span>
                             </div>
-
-                                <div className=' reportitem  reportitem--report'>
-                                <Dropdown options={optionsServiceName}        
-                                    onChange={(e)=>handleDropdownValue(e)} 
-                                    value={defaultOption} placeholder="Select an option" />
-                                    
-                                    <span>Tên dịch vụ</span>
-                                </div>
-                    
-
-                        
+                            <div className=' reportitem  reportitem--report'>
+                            <Dropdown options={optionsServiceName}        
+                                onChange={(e)=>handleDropdownValue(e)} 
+                                value={defaultOption} placeholder="Select an option" />
+                                
+                                <span>Tên dịch vụ</span>
+                            </div>
                                 <div className=' reportitem '>
                                 <Dropdown options={optionsTime}        
                                     onChange={(e)=>handleDropdownValue(e)} 
@@ -188,9 +134,6 @@ function Listreport({dataTable,fetchData }:any){
                                     
                                     <span>Thời gian cấp</span>
                                 </div>
-                        
-
-                        
                                 <div className=' reportitem '>
                                 <Dropdown options={optionsState}        
                                     onChange={(e)=>handleDropdownValue(e)} 
@@ -198,68 +141,57 @@ function Listreport({dataTable,fetchData }:any){
                                     
                                     <span>Tình trạng</span>
                                 </div>
-                        
-
-                    
                                 <div className=' reportitem  '>
                                 <Dropdown options={optionsProduct}        
                                     onChange={(e)=>handleDropdownValue(e)} 
                                     value={defaultOption} placeholder="Select an option" />
-                                    
                                     <span>Nguồn cấp</span>
                                 </div>
-                    
-                        
-
-                      
                         </div>
                         {
                         dataReport.map ( (item:any,index:any)=>
                         <div className='reporttablelist' key={index}>
-                            <div className='reportitemnameid' style={{width:"217px"}}>
+                            <div className='reportitemnameid' style={{width:"295px"}}>
                                 <p className="reportitemnametitleid">
-                                         {item.id}  
+                                    {item.id}  
                                 </p>
                             </div>
-                            <div className='reportitemnameid' style={{width:"218px"}}>
+                            <div className='reportitemnameid' style={{width:"295px"}}>
                                 <p className="reportitemnametitleid">
-                                         {item.name}    
+                                    {item.name}    
                                 </p>
                             </div>
-                            <div className='reportitemnameid' style={{width:"216px"}}>
+                            <div className='reportitemnameid' style={{width:"291px"}}>
                                 <p className="reportitemnametitleid">
-                                         {item.time}    
+                                    {item.time}    
                                 </p>
                             </div>
-                            <div className='reportitemnameid' style={{width:"218px"}}>
+                            <div className='reportitemnameid' style={{width:"295px"}}>
                                 <p className="reportitemnametitle">
                                 {item.status == 'Đang chờ' && <ServiceWaitPoint/>}
                                 {item.status == 'Đã sử dụng' && <ServiceUsedPoint/>}
                                 {item.status == 'Bỏ qua' && <ServiceUnactivePoint/>}
                                 </p>
                             </div>
-                            <div className='reportitemnameid' style={{width:"216px"}}>
+                            <div className='reportitemnameid' style={{width:"295px"}}>
                                 <p className="reportitemnametitleid">
-                                         {item.sourse}    
+                                    {item.sourse}    
                                 </p>
                             </div>
                         </div>
                         )}
-               
                     </div>
-
-              
                 </div>
-                <Link to=""> <div className="ServiceAdd">
-                 <div className="ServiceAddIMG">
-                         <img src={dow} alt="" />  
-                </div>
-                <div className="reporttitlename">Tải về</div>
-                </div>
+                <Link to=""> 
+                    <div className="ServiceAdd">
+                        <div className="ServiceAddIMG">
+                            <img src={dow} alt="" />  
+                        </div>
+                        <div className="reporttitlename">Tải về</div>
+                    </div>
                 </Link>
                 </div>
                 <div className='chosepape'>
-
                     <Page/>
                 </div>   
             </div>
@@ -268,25 +200,12 @@ function Listreport({dataTable,fetchData }:any){
 }
 const mapStateToProps = (state:any) =>{
     return {
-  
-      dataTable:state.dataAlta
-  
-     
-        
-        
-        
+    dataTable:state.dataAlta
     }
-  }
-  
-  const mapDispatchToProps = (dispatch:any) =>{
+}
+const mapDispatchToProps = (dispatch:any) =>{
     return {
-  
-            fetchData: ()=>  dispatch(fetchData()),
-          
-      
+        fetchData: ()=>  dispatch(fetchData()),
     }
-  }
-  
-  
+}
 export default connect(mapStateToProps, mapDispatchToProps)(Listreport)
-  

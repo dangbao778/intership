@@ -1,4 +1,4 @@
-import classes from './Listitemservice.module.css'
+import listitemservice from './Listitemservice.module.css'
 import Bellactive from "../../Bellactive";
 import {Link} from 'react-router-dom';
 import levelgoto     from "../../image/gotoright.svg";
@@ -18,190 +18,154 @@ import plus from "../../image/plus.svg";
 function Listitemservice({dataTable,fetchData, }:any){
     useEffect(() => {
         fetchData();
-      }, []);
+    }, []);
     const [startDate, setStartDate] = useState<Date | null>(new Date());
     const [search , setSearch] = useState('')
     const ServiceWaitPoint = ()=>{
         return (
                 <><span className="green">
-                  <img src={green} alt="green"></img>
-                  </span><span>Hoạt động</span></>
+                <img src={green} alt="green"></img>
+                </span><span>Hoạt động</span></>
         )
     }  
-    
-    
     const ServiceUsedPoint = ()=>{
     return (
             <><span className="black">
                 <img src={red} alt="green" ></img>
-                
-              </span><span>Ngưng hoạt động</span></>
-    )
+            </span><span>Ngưng hoạt động</span></>
+        )
     }  
     const data = dataTable.dataService
-        
-
         const [dataServiceTable  , setDataServiceTable] = useState(data)
-
-
-
-
     const options = [
         'Tất cả', 'Hoạt động', 'Ngưng hoạt động'
-      ];
-
-     
-   const defaultOption = options[0];
-
-  
-
-
-
-
+    ];
+const defaultOption = options[0];
         const handleDropdownValue = (e: any)=>{
-            
                 if(e.value=='Hoạt động'){
                         const filterdata = data.filter( (item:any)=> item.status == 'Hoạt động')
                         setDataServiceTable(filterdata)
                 }else if(e.value=='Ngưng hoạt động') {
-                        const filterdata = data.filter((item:any) => item.status == 'Ngưng hoạt động')
-                        setDataServiceTable(filterdata)
+                    const filterdata = data.filter((item:any) => item.status == 'Ngưng hoạt động')
+                    setDataServiceTable(filterdata)
                 }
-                
                 else{
                         setDataServiceTable(data)
                 }
-                 
-           }
+        }
     return (
-        <div className={classes.service}>
-            <div className={classes.serviceinfo}>
-                <div className={classes.serviceinfolist}>
-                    <p className={classes.servicetitle}>
+        <div className={listitemservice.service}>
+            <div className={listitemservice.serviceinfo}>
+                <div className={listitemservice.serviceinfolist}>
+                    <p className={listitemservice.servicetitle}>
                         Dịch vụ
                     </p>
-                        <img src={levelgoto} alt="levelgoto" className={classes.servicegoto}></img>
-                
-                    <p className={classes.servicelist }>
+                        <img src={levelgoto} alt="levelgoto" className={listitemservice.servicegoto}></img>
+                    <p className={listitemservice.servicelist }>
                         Danh sách dịch vụ
                     </p>
                 </div>
-                <div className={classes.bell}>
+                <div className={listitemservice.bell}>
                     <Bellactive/>
                 </div>
             </div>
-            <div className={classes.servicecontainer}>
-                <div className={classes.servicelisttitle}>
+            <div className={listitemservice.servicecontainer}>
+                <div className={listitemservice.servicelisttitle}>
                     Quản lý dịch vụ
                 </div>
-                <div className={classes.servicelistdrow}>
-                    <div className={classes.serviceitemdrow}>  
-                        <div className={classes.serviceitem}>
-                            <div className={classes.servicename}>Tên vai trò</div>
-                                <div className={classes.servicedrow}>
+                <div className={listitemservice.servicelistdrow}>
+                    <div className={listitemservice.serviceitemdrow}>  
+                        <div className={listitemservice.serviceitem}>
+                            <div className={listitemservice.servicename}>Tên vai trò</div>
+                                <div className={listitemservice.servicedrow}>
                                     <Dropdown options={options}  
-                                            onChange={(e)=>handleDropdownValue(e)} 
-                                            value={defaultOption} placeholder="Select an option" />
+                                        onChange={(e)=>handleDropdownValue(e)} 
+                                        value={defaultOption} placeholder="Select an option" />
                                 </div>
                         </div>
-                        <div className={classes.serviceitem}>
-                            <div className={classes.servicenamee}>Chọn thời gian</div>
-                                <div className={classes.servicedrowcalendar}>
+                        <div className={listitemservice.serviceitem}>
+                            <div className={listitemservice.servicenamee}>Chọn thời gian</div>
+                                <div className={listitemservice.servicedrowcalendar}>
                                     
                                     <DatePicker 
-                                
                                     selected={startDate} onChange={(date) => setStartDate(date)} />
-                                    <img src={goright} alt="goright" className={classes.goright}></img>    
+                                    <img src={goright} alt="goright" className={listitemservice.goright}></img>    
                                     <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                                 </div>
                         </div>
                     </div>
-                        <div className={classes.serviceitem}>
-                            <div className={classes.servicename}>Từ khoá</div>
-                                <div className={classes.servicedrow}>
+                        <div className={listitemservice.serviceitem}>
+                            <div className={listitemservice.servicename}>Từ khoá</div>
+                                <div className={listitemservice.servicedrow}>
                                 <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSearch(e.target.value)}/>
-                                <div className={classes.fi_search}>
+                                <div className={listitemservice.fi_search}>
                                     <img src={fi_search} alt="" />
                                 </div>
                                 </div>
                         </div>
                 </div>
-                <div className={classes.tablelistitem}>
-                    <div className={classes.servicetable}>
-                        <div className={classes.serviceitemname} style={{width:"150px"}}>
-                            <p className={classes.serviceitemnametitle}> Mã dịch vụ </p>    
+                <div className={listitemservice.tablelistitem}>
+                    <div className={listitemservice.servicetable}>
+                        <div className={listitemservice.serviceitemname} style={{width:"200px"}}>
+                            <p className={listitemservice.serviceitemnametitle}> Mã dịch vụ </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"224px"}}>
-                            <p className={classes.serviceitemnametitle}> Tên dịch vụ  </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"300px"}}>
+                            <p className={listitemservice.serviceitemnametitle}> Tên dịch vụ  </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"230px"}}>
-                            <p className={classes.serviceitemnametitle}> Mô tả </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"300px"}}>
+                            <p className={listitemservice.serviceitemnametitle}> Mô tả </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"253px"}}>
-                            <p className={classes.serviceitemnametitle}> Trạng thái hoạt động </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"400px"}}>
+                            <p className={listitemservice.serviceitemnametitle}> Trạng thái hoạt động </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"125px"}}>
-                            <p className={classes.serviceitemnametitle}>  </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"150px"}}>
+                            <p className={listitemservice.serviceitemnametitle}>  </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"125px"}}>
-                            <p className={classes.serviceitemnametitle}>  </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"160px"}}>
+                            <p className={listitemservice.serviceitemnametitle}>  </p>    
                         </div>
                     </div>
-
-          
                     {
                         dataServiceTable.map ( (item:any,index:any)=>   
-                         
-                    <div className={classes.servicetablelist} key={index}>
-                        <div className={classes.serviceitemname} style={{width:"150px"}}>
-                            <p className={classes.serviceitemnametitleid}>{item.code} </p>    
+                    <div className={listitemservice.servicetablelist} key={index}>
+                        <div className={listitemservice.serviceitemname} style={{width:"200px"}}>
+                            <p className={listitemservice.serviceitemnametitleid}>{item.code} </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"224px"}}>
-                            <p className={classes.serviceitemnametitleid}>{item.name}  </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"300px"}}>
+                            <p className={listitemservice.serviceitemnametitleid}>{item.name}  </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"230px"}}>
-                            <p className={classes.serviceitemnametitleid}> {item.des}  </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"300px"}}>
+                            <p className={listitemservice.serviceitemnametitleid}> {item.des}  </p>    
                         </div>
-                        <div className={classes.serviceitemname} style={{width:"253px"}}>
-                      
-                        <p className={`${classes.levelitemnametitleid} ${classes.id}`}>  
-                              {item.status == 'Hoạt động' && <ServiceWaitPoint/>}
-                              {item.status == 'Ngưng hoạt động' && <ServiceUsedPoint/>}
-                             
-                          </p>    
+                        <div className={listitemservice.serviceitemname} style={{width:"400px"}}>
+                        <p className={`${listitemservice.levelitemnametitleid} ${listitemservice.id}`}>  
+                            {item.status == 'Hoạt động' && <ServiceWaitPoint/>}
+                            {item.status == 'Ngưng hoạt động' && <ServiceUsedPoint/>}
+                        </p>    
                         </div>
                         <Link to ="./detailservice">
-                        <div className={classes.serviceitemname} style={{width:"125px"}}>
-                            <div className={classes.serviceitemlistnew}> Chi tiết  </div>    
+                        <div className={listitemservice.serviceitemname} style={{width:"150px"}}>
+                            <div className={listitemservice.serviceitemlistnew}> Chi tiết  </div>    
                         </div>
                         </Link >
                         <Link to ="/listservice">
-                        <div className={classes.serviceitemname} style={{width:"125px"}}>
-                            <div className={classes.serviceitemlistnew}> Cập nhật </div>    
+                        <div className={listitemservice.serviceitemname} style={{width:"158px"}}>
+                            <div className={listitemservice.serviceitemlistnew}> Cập nhật </div>    
                         </div>
                         </Link>
                     </div>
-
-                    
-                         )
+                    )
                     }
-           
-                        
-              
-             
-            
-                </div>
             </div>
-
-            <Link to= '/listservice'>  <div className={classes.add}>
-                        <div className={classes.addservice}>
-                                <img src={plus} alt="" />  
-                        </div>
-                        <p className={classes.servicetitlename}> Thêm dịch vụ</p>
+        </div>
+            <Link to= '/listservice'>  <div className={listitemservice.add}>
+                    <div className={listitemservice.addservice}>
+                        <img src={plus} alt="" />  
+                    </div>
+                    <p className={listitemservice.servicetitlename}> Thêm dịch vụ</p>
                 </div>
             </Link>    
-            <div className={classes.chosepape}>
-
+            <div className={listitemservice.chosepape}>
                 <Page/>
             </div>      
         </div>
@@ -209,26 +173,12 @@ function Listitemservice({dataTable,fetchData, }:any){
 }
 const mapStateToProps = (state:any) =>{
     return {
-      dataTable:state.dataAlta
-  
-     
-        
-        
-        
+    dataTable:state.dataAlta
     }
-  }
-  
-  
-  
-  
-  const mapDispatchToProps = (dispatch:any) =>{
+}
+const mapDispatchToProps = (dispatch:any) =>{
     return {
-            fetchData: ()=>  dispatch(fetchData()),
-      
+        fetchData: ()=>  dispatch(fetchData()),
     }
-  }
-  
-  
-  
-  
-  export default connect(mapStateToProps,mapDispatchToProps)(Listitemservice);
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Listitemservice);

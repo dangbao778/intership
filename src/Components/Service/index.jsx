@@ -4,9 +4,8 @@ import Listitemservice from './Listitemservice'
 function Service(){
     return(
         <div className={classes.listservice}>
-
-        <div className={classes.listlevelright}>
-            <Listitemservice/>
+            <div className={classes.listlevelright}>
+                <Listitemservice/>
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ function RoleManagement({dataTable,fetchData,SENDDATAROLEMANAGEMENT}:any ){
     }
     return(
         <div className={rolemanagement.listrole}>
-            <Listitem/>
+            {/* <Listitem/> */}
             <div className={rolemanagement.listroleright}>
                 <div className={rolemanagement.role}>
                     <div className={rolemanagement.roleinfo}>
@@ -41,33 +41,33 @@ function RoleManagement({dataTable,fetchData,SENDDATAROLEMANAGEMENT}:any ){
                             </div>
                             <div className={rolemanagement.tablelistitem}>
                                 <div className={rolemanagement.roletable}>
-                                    <div className={rolemanagement.roleitemname} style={{width:"224px"}}>
+                                    <div className={rolemanagement.roleitemname} style={{width:"300px"}}>
                                         <p className={rolemanagement.roleitemnametitle}> Tên vai trò </p>    
                                     </div>
-                                    <div className={rolemanagement.roleitemname} style={{width:"224px"}}>
+                                    <div className={rolemanagement.roleitemname} style={{width:"300px"}}>
                                         <p className={rolemanagement.roleitemnametitle}> Số người dùng </p>    
                                     </div>
-                                    <div className={rolemanagement.roleitemname} style={{width:"537px"}}>
+                                    <div className={rolemanagement.roleitemname} style={{width:"1000px"}}>
                                         <p className={rolemanagement.roleitemnametitle}> Mô tả </p>    
                                     </div>
-                                    <div className={rolemanagement.roleitemname} style={{width:"125px"}}>
+                                    <div className={rolemanagement.roleitemname} style={{width:"300px"}}>
                                         <p className={rolemanagement.roleitemnametitle}>  </p>    
                                     </div>
                                 </div>
                                 {
                                     dataRoleTableDetail.map ((item:any,index:any)=>
                                     <div className={rolemanagement.leveltablelist}key={index} >
-                                        <div className={rolemanagement.levelitemname} style={{width:"224px"}}>
+                                        <div className={rolemanagement.levelitemname} style={{width:"300px"}}>
                                             <p className={rolemanagement.levelitemnametitleid}>{item.name}</p>    
                                         </div>
-                                        <div className={rolemanagement.levelitemname} style={{width:"224px"}}>
+                                        <div className={rolemanagement.levelitemname} style={{width:"300px"}}>
                                             <p className={rolemanagement.levelitemnametitleid}>{item.users}</p>    
                                         </div>
-                                        <div className={rolemanagement.levelitemname} style={{width:"537px"}}>
+                                        <div className={rolemanagement.levelitemname} style={{width:"1000px"}}>
                                             <p className={rolemanagement.levelitemnametitleid}>{item.des}</p>    
                                         </div>
-                                        <div className={rolemanagement.roleitemname} style={{width:"125px"}}>
-                                            <Link to='/dashboard/RoleManagement/add-role-management'>
+                                        <div className={rolemanagement.roleitemname} style={{width:"300px"}}>
+                                            <Link to='/dashboard/RoleManagement/update-role-management'>
                                                 <p className={rolemanagement.roleitemnametitleid1}>   
                                                     <span onClick={ () => handleSend(item)}>
                                                             Cập nhập

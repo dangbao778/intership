@@ -122,12 +122,14 @@ function Update(){
             <div className={updateaccount.userbutton}>
             <Link to ='/dashboard/AccountManagement'>
             <button className={updateaccount.cannel}>
-                <a href="" className={updateaccount.canneltitle}>Hủy bỏ  </a>
+                <a className={updateaccount.canneltitle}>Hủy bỏ</a>
             </button>
             </Link>
-            <button className={updateaccount.more}>
-                <a href="" className={updateaccount.moretitle}>Thêm  </a>
-            </button>
+            <Link to ='/dashboard/AccountManagement'>
+                <button className={updateaccount.more}>
+                    <a className={updateaccount.moretitle}>Cập nhật</a>
+                </button>
+            </Link>
             </div>
         </div>
     </div>

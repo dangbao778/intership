@@ -20,9 +20,11 @@ function AddRole(){
                                 Cài đặt hệ thống
                             </p>
                             <img src={rolegoto} alt="rolegoto" className={addrole_style.rolegoto}></img>
+                            <Link to='/dashboard/RoleManagement'>
                             <p className={addrole_style.roletitle}>
                                 Quản lý vai trò
                             </p>
+                            </Link>
                             <img src={rolegoto} alt="rolegoto" className={addrole_style.rolegoto}></img>
                             <p className={addrole_style.rolelist }>
                                 Thêm vai trò
@@ -155,7 +157,7 @@ function AddRole(){
                                     <Link to="/dashboard/RoleManagement"><button>Hủy bỏ</button></Link>
                                 </div>
                                 <div className={addrole_style.contaniner__addrole}>
-                                    <button>Thêm dịch vụ</button>
+                                    <Link to='/dashboard/RoleManagement'><button>Thêm</button></Link>
                                 </div>
                             </div>
                     </div>

@@ -1,6 +1,5 @@
 import forgotpass from "./Forgotpass.module.css"
 import alta from "../../image/alta.png"
-
 import Frame from  "../../image/Frame.png"
 import { Link } from "react-router-dom"
 const Forgotpass =()=>{
@@ -16,18 +15,19 @@ const Forgotpass =()=>{
                     </div>
                     
                     <input type="text" className={forgotpass.title} name="" placeholder=" "/>
+                    <Link to='/'>
                         <div className={forgotpass.sumitleft} >
                             <p className={forgotpass.cancel} >Hủy</p>
                         </div>
-                        <Link to ="/wrong/forgot/reset">
+                    </Link>
+                    <Link to ="/wrong/forgot/reset">
                         <div className={forgotpass.sumitright}> 
-                        <p className={forgotpass.next} >tiếp tục </p>
+                            <p className={forgotpass.next} >tiếp tục </p>
                         </div>
-                        </Link>
+                    </Link>
             </div>
             <div className={forgotpass.right}>
-                    <img src={Frame} alt='frame' className={forgotpass.frame}></img>
-                
+                <img src={Frame} alt='frame' className={forgotpass.frame}></img>
             </div>
         </div>
     )

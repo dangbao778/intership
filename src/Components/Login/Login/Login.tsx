@@ -12,15 +12,15 @@ const Login =()=>{
                 <img src={alta} alt='pic1'className={login.alta} ></img>     
                     <div className={login.login1}>
                         <div className={login.name}>Tên đăng nhập * </div>
-                        <input type="text" className={login.title} name="" placeholder="lequynhavan01"/>
+                        <Link to='/wrong'><input type="text" className={login.title} name="" placeholder="lequynhavan01"/></Link>
                         
                         <div className={login.password}>Mật khẩu * </div>
-                        <input type="password"  className={login.title} name="" placeholder="****"/>
-                        <img src={pic7}  alt='eye'className={login.eye}  ></img>
+                        <input type="password"  className={login.title} name="" placeholder="********"/>
+                        <img src={pic7} alt='eye' className={login.eye}  ></img>
                         <Link to = "/wrong/forgot"><div className={login.password1}>Quên mật khẩu? </div></Link>
                         
                     </div>
-                    <Link to="/wrong">
+                    <Link to="/dashboard">
                         <div className={login.sumit} > 
                             <p className={login.log__in} >Đăng nhập</p>
                         </div>

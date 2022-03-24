@@ -1,16 +1,11 @@
 .bellactive{
     display: flex;
     align-items: center;
-    
-}
-.bell{
-   
 }
 .notify{
     position: absolute;
-    left: 904px;
+    left: 1150px;
     top: 70px;
-    /* overflow-y:auto; */
     width: 330px;
     height: 430px;
     background-color: #FFFFFF;
@@ -19,16 +14,8 @@
     z-index: 1;
     display: flex   ;
     flex-direction: column;
-
-    /* display: none; */
-
 }
-.notifyheader{
-    /* display: block; */
-}
-
-
-a{
+span{
     text-decoration: none;
 }
 .notifytitle{
@@ -38,28 +25,20 @@ a{
     padding-left: 20px;
     font-size: 20px;
     line-height: 30px;
+    border-radius: 3px;
 }
 .notifylist{
-    /* background-color: aqua; */
     display: flex   ;
     flex-direction: column;
     overflow: scroll;
     margin-left: 20px;
-    
 }
-
-
 .notifylink{
-  
-    /* height: 60px; */
     padding-top: 8px;
     border-bottom: 1.5px solid #D4D4D7;
     opacity: 0.6;
-
-
 }
-
-.notifyname {
+.name {
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
@@ -67,7 +46,7 @@ a{
     line-height: 24px;
     color: rgba(191, 88, 5, 1);
 }
-.notifytime{
+.time{
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
@@ -75,14 +54,11 @@ a{
     line-height: 24px;
     color: #535261;
 }
-
-.dashboadavata{
+.avata{
     padding-left: 20px;
     padding-right: 10px;
-
 }
-
-.dashboaditemtop{
+.hello{
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
@@ -90,8 +66,7 @@ a{
     line-height: 18px; 
     color: #7E7D88;
 }
-
-.dashboaditembottom{
+.nameaccount{
     font-family: Nunito;
     font-style: normal;
     font-weight: bold;
@@ -99,6 +74,3 @@ a{
     line-height: 24px;
     color: #535261;
 }
-
-
-

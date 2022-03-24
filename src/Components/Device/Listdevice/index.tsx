@@ -13,32 +13,29 @@ import {connect} from 'react-redux';
 import green from '../../image/green.svg'
 import red from '../../image/red.svg'
 import Page from "../../Page";
-import Listitem from "../../Listitem";
 function Listdevice({dataTable,fetchData}:any){
     useEffect(() => {
         fetchData();
     }, []);
     const ServiceWaitPoint = ()=>{
         return (
-                <><span className="red">
-                <img src={red}></img>
-                </span><span>Ngưng hoạt động</span>
-                </>
+            <><span className="red">
+            <img src={red} alt="status action"></img>
+            </span><span>Ngưng hoạt động</span>
+            </>
         )
     }  
-    
-    
     const ServiceUsedPoint1 = ()=>{
     return (
             <><span className="green">
-                <img src={green} ></img>    
+                <img src={green} alt='status action' ></img>    
             </span><span>Kết nối</span></>
         )
     }  
     const ServiceWaitPoint1 = ()=>{
         return (
                 <><span className="red">
-                <img src={red}></img>
+                <img src={red} alt='status connect'></img>
                 </span><span>Mất kết nối</span>
                 </>
         )
@@ -48,7 +45,7 @@ function Listdevice({dataTable,fetchData}:any){
     const ServiceUsedPoint = ()=>{
     return (
             <><span className="green">
-                <img src={green} ></img>
+                <img src={green} alt='status action' ></img>
             </span><span>Hoạt động</span></>
         )
     }  
@@ -66,15 +63,15 @@ const optionsConnect = [
             if(e.value=='Hoạt động'){
                     const filterdata = data.filter( (item:any) => item.status == 'Hoạt động')
                     setDataEquiment(filterdata)
-            }else if(e.value=='Ngưng hoạt động') {
+            }else if(e.value == 'Ngưng hoạt động') {
                     const filterdata = data.filter((item:any)=> item.status == 'Ngưng hoạt động')
                     setDataEquiment(filterdata)
             }
-            else if(e.value=='Ngưng hoạt động') {
+            else if(e.value == 'Ngưng hoạt động') {
                     const filterdata = data.filter((item:any)=> item.status == 'Ngưng hoạt động')
                     setDataEquiment(filterdata)
             }
-            else if(e.value=='Kết nối') {
+            else if(e.value == 'Kết nối') {
                     const filterdata = data.filter((item:any)=> item.connet == 'Kết nối')
                     setDataEquiment(filterdata)
             }
@@ -162,7 +159,6 @@ const optionsConnect = [
                                 <div className={listdevice_style.deviceitemnametitle}>  </div>    
                             </div> 
                                 <div className={listdevice_style.deviceitemnametitle} style={{width:"110px"}} >  </div>    
-                    
                         </div>
                         {
                         dataEquiment.map ( (item:any,index:any)=>   

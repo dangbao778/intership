@@ -1,5 +1,9 @@
 .account{
     position: relative;
+    width: 100%;
+    height: 930px;
+    background: #F7F7F7;
+    padding: 20px;
 }
 .levelgoto{
     color: #7E7D88;
@@ -66,7 +70,7 @@
 .accountlistitem{
     /* display: flex; */
     margin-top: 20px;
-    width: 1192px;
+    width: 100%;
     height: 514px;
     background: #FFFFFF;
     box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
@@ -108,11 +112,11 @@
     border: 1.5px solid #D4D4D7;
     box-sizing: border-box;
     border-radius: 8px;
-    width: 550px;
+    width: 700px;
 }
 
 .accountdrow{
-    width: 550px;
+    width: 700px;
 }
 
 .accountdrow .Dropdown-placeholder is-selected{
@@ -132,14 +136,14 @@
 
 .eyeopenpass{
     position: absolute;
-    right: 70px;
-    top: 324px;
+    right: 160px;
+    top: 345px;
 }
 
 .eyeopennewpass{
     position: absolute;
-    right: 70px;
-    top: 411px;
+    right: 160px;
+    top: 430px;
 }
 
 .userbutton{

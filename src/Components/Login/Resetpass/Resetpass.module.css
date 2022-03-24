@@ -1,11 +1,10 @@
-.login{
+.resetpassword{
     display: flex;
     width: 1440px;
     height:  810px;
     position: relative;
     border-radius: 4px;
 }
-
 .left{
     background: #F7F7F7;
     display: flex;
@@ -17,30 +16,8 @@
     width: 592px;
     height: auto;
 }
-
-.login1{
-    
-    position: absolute;
-    width: 400px;
-    left: 94px;
-    top: 360px;
-    height: 810px;
-
-}
-.title{
-   
-    border: 1.5px solid #D4D4D7;
-    box-sizing: border-box;
-    border-radius: 8px;
-    padding: 10px 220px 10px 12px;
-}
-.name{
-    margin: 4px 0px;
-}
-
 h4{
     position: absolute;
- 
     height: 33px;
     width: 211px;
     left: 198px;
@@ -51,10 +28,32 @@ h4{
     font-size: 22px;
     line-height: 33px;
     color: #282739;
-    
+}
+.alta{
+    position: absolute;
+    width: 170px;
+    height: 136px;
+    left: 200px;
+    top: 82px;
+}
 
+.form{
+    position: absolute;
+    width: 400px;
+    left: 94px;
+    top: 360px;
+    height: 810px;
+}
+.title{
+    border: 1.5px solid #D4D4D7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 10px 220px 10px 12px;
 }
 .password{
+    margin: 4px 0px;
+}
+.enterpassword{
     margin: 4px 0px;
     padding-top: 10px;
 }
@@ -67,36 +66,6 @@ h4{
     position: absolute;
     top: 112px;
     right: 21px;
-}
-.password1{
-    position: absolute;
-    width: 102px;
-    height: 21px;
-    margin-top: 10px;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 21px;
-    color: #E73F3F;
-    }
-.alta{
-    position: absolute;
-    width: 170px;
-    height: 136px;
-    left: 200px;
-    top: 82px;
-}
-
-.acb{
-    position: absolute;
-    left: 366px;
-    top: 50px;  
-}
-.eye{
-    position: absolute;
-    left: 366px;
-    top: 133px;  
 }
 .sumit{
     padding: 10px 24px;
@@ -135,13 +104,9 @@ h4{
     position: absolute;
     left: 1046px;
     top: 407px;
-    }
-
+}
 .pic6{
     position: absolute;
-
     left: 1046px;
     top: 454px;
-    
-    
 }

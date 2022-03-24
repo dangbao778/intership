@@ -4,9 +4,8 @@ import Accountinformation from '../AccountManagement/Accountinformation'
 function Moreaccount(){
     return(
         <div className={classes.listaccount}>
-            <Listitem/>
-        <div className={classes.listlevelright}>
-            <Accountinformation/>
+            <div className={classes.listlevelright}>
+                <Accountinformation/>
             </div>
         </div>
     )   

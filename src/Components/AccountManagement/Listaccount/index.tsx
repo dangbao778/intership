@@ -53,8 +53,6 @@ function Listaccount({dataTable,fetchData}:any){
     const handleDropdownValue = (e:any)=>{
         console.log(e.value);
     }
-
-
     const [search , setSeatch] = useState('')
 
     return(
@@ -69,9 +67,12 @@ function Listaccount({dataTable,fetchData}:any){
                     Quản lý tài khoản
                 </p>
             </div>
-            <div className={listaccount.bell}>
-                <Bellactive/>
-            </div>
+            <Link to='/account'>
+                <div className={listaccount.bell}>
+                    <Bellactive/>
+                </div>
+            </Link>
+            
         </div>
         <div className={listaccount.accountcontainer}>
             <div className={listaccount.accountlisttitle}>
@@ -101,22 +102,22 @@ function Listaccount({dataTable,fetchData}:any){
             </div>
             <div className={listaccount.tablelistitem}>
                 <div className={listaccount.accounttable}>
-                    <div className={listaccount.accountitemname} style={{width:"150px"}}>
+                    <div className={listaccount.accountitemname} style={{width:"230px"}}>
                         <p className={listaccount.accountitemnametitle}> Tên đăng nhập </p>    
                     </div>
-                    <div className={listaccount.accountitemname} style={{width:"166px"}}>
+                    <div className={listaccount.accountitemname} style={{width:"230px"}}>
                         <p className={listaccount.accountitemnametitle}> Họ tên </p>    
                     </div>
-                    <div className={listaccount.accountitemname} style={{width:"130px"}}>
+                    <div className={listaccount.accountitemname} style={{width:"200px"}}>
                         <p className={listaccount.accountitemnametitle}> Số điện thoại </p>    
                     </div>
-                    <div className={listaccount.accountitemname} style={{width:"255px"}}>
+                    <div className={listaccount.accountitemname} style={{width:"300px"}}>
                         <p className={listaccount.accountitemnametitle}> Email </p>    
                     </div>
-                    <div className={listaccount.accountitemname} style={{width:"114px"}}>
+                    <div className={listaccount.accountitemname} style={{width:"180px"}}>
                         <p className={listaccount.accountitemnametitle}> Vai trò </p>    
                     </div>
-                    <div className={listaccount.accountitemname} style={{width:"193px"}}>
+                    <div className={listaccount.accountitemname} style={{width:"250px"}}>
                         <p className={listaccount.accountitemnametitle}> Trạng thái hoạt động</p>    
                     </div>
                         <p className={listaccount.accountitemnametitle}>  </p>    
@@ -125,22 +126,22 @@ function Listaccount({dataTable,fetchData}:any){
                     {
                     dataUserList.map( (item:any,index:any) =>
                     <div className={listaccount.accounttablelist} key={index}>
-                        <div className={listaccount.accountitemname} style={{width:"150px"}}>
+                        <div className={listaccount.accountitemname} style={{width:"230px"}}>
                             <p className={listaccount.accountitemnametitleid}> {item.id} </p>    
                         </div>
-                        <div className={listaccount.accountitemname} style={{width:"166px"}}>
+                        <div className={listaccount.accountitemname} style={{width:"230px"}}>
                             <p className={listaccount.accountitemnametitleid}> {item.name} </p>    
                         </div>
-                        <div className={listaccount.accountitemname} style={{width:"130px"}}>
+                        <div className={listaccount.accountitemname} style={{width:"200px"}}>
                             <p className={listaccount.accountitemnametitleid}> {item.phone}</p>    
                         </div>
-                        <div className={listaccount.accountitemname} style={{width:"255px"}}>
+                        <div className={listaccount.accountitemname} style={{width:"300px"}}>
                             <p className={listaccount.accountitemnametitleid}> {item.email} </p>    
                         </div>
-                        <div className={listaccount.accountitemname} style={{width:"114px"}}>
+                        <div className={listaccount.accountitemname} style={{width:"180px"}}>
                             <p className={listaccount.accountitemnametitleid}> {item.role} </p>    
                         </div>
-                        <div className={listaccount.accountitemname} style={{width:"193px"}}>
+                        <div className={listaccount.accountitemname} style={{width:"250px"}}>
                             <p className={`${listaccount.levelitemnametitleid} ${listaccount.id}`}>
                             {item.status == 'Hoạt động' && <ServiceUsedPoint/>}
                             {item.status == 'Ngưng hoạt động' && <ServiceUnactivePoint/>}  </p>    
@@ -152,12 +153,13 @@ function Listaccount({dataTable,fetchData}:any){
                         )}
                 </div>
         </div>  
-        <Link to= '/dashboard/AccountManagement/Moreaccount'>  <div className={listaccount.add}>
-                        <div className={listaccount.addaccount}>
-                                <img src={plus} alt="" />  
-                        </div>
-                        <p className={listaccount.accounttitlename}> Thêm tài khoản</p>
+        <Link to= '/dashboard/AccountManagement/Moreaccount'>  
+            <div className={listaccount.add}>
+                <div className={listaccount.addaccount}>
+                    <img src={plus} alt="" />  
                 </div>
+                <p className={listaccount.accounttitlename}>Thêm tài khoản</p>
+            </div>
         </Link>      
             <div className={listaccount.chosepape}>
                 <Page/>

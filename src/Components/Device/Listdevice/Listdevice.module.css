@@ -1,5 +1,4 @@
 .device{
-    /* margin-left: 20px; */
     position: relative;
 }
 .info{
@@ -73,9 +72,6 @@
     display: flex;
     width: 78%;
     margin-top: 5px;
-    /* justify-content: space-between; */
-    
-    
 }
 .listtitle{
     font-family: Nunito;
@@ -172,10 +168,8 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
-
     color: #FFFFFF;
 }
-
 .deviceitemnametitle{
     margin-left: 10px;
     font-family: Nunito;
@@ -186,11 +180,6 @@
     color: #FFFFFF;
     
 }
-
-
-
-
-
 .add{
     position:absolute;
     width: 80px;

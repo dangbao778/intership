@@ -1,16 +1,16 @@
-import classes from './Dashboad.module.css'
-import Menubar from './Menubar'
+import index from './Dashboad.module.css'
+import Overview from './Overview'
+import LevelChart from './LevelChart'
 import Chart from './Chart'
-import Chartmonth from './Chartmonth'
 export default function Dashboad(prop:any) {
     return(
-        <div className={classes.dashboad}>
-            <div className={classes.dashboadmiddle}>
-                <div className={classes.top}><Chart/></div>
-                <Chartmonth/>
+        <div className={index.dashboad}>
+            <div className={index.middle}>
+                <div className={index.top}><LevelChart/></div>
+                <div className={index.bottom}><Chart/></div>
             </div>   
-            <div className={classes.dasboardright}></div>
-            <Menubar/>
+            <div className={index.dasboardright}></div>
+            <Overview/>
         </div>
     )
 }

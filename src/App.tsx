@@ -13,8 +13,6 @@ import Information  from './Components/Level/Information';
 import Numberlevel from './Components/Level/Numberlevel';
 import AccountManagement from './Components/AccountManagement';
 import Moreaccount from './Components/Moreaccount';
-import Updateaccount from './Components/AccountManagement/Updateaccount';
-import Diarywork from './Components/Diarywork';
 import Service from './Components/Service';
 import Device from './Components/Device';
 import Adddevice from './Components/Device/Adddevice';
@@ -26,11 +24,14 @@ import AddRole from './Components/RoleManagement/AddRole';
 import Detaildevice from './Components/Device/Detaildevice';
 import Updatedevice from './Components/Device/Updatedevice';
 import Listitem from './Components/Listitem'
+import UpdateRole from './Components/RoleManagement/UpdateRole';
+import Update from './Components/AccountManagement/Update';
+import Diaryuser from './Components/Diarywork';
 function App() {
   return (
     <div className="App"> 
         <Routes>
-          <Route path='/login' element={<Login/>}/>
+          <Route path='/' element={<Login/>}/>
           <Route path='/wrong' element={<Wrongpass/>}/>
           <Route path='/wrong/forgot' element={<Forgotpass/>}/>
           <Route path='/wrong/forgot/reset' element={<Resetpass/>}/>
@@ -42,18 +43,19 @@ function App() {
           <Route path='/level/service' element={< Information/>}/>
           <Route path='/level/numberlevel' element={< Numberlevel/>}/>
           <Route path='/level/numberlevel/level' element={< Listlevel/>}/>
-          <Route path='/dashboard/AccountManagement' element={<AccountManagement/>}/>
-          <Route path='/dashboard/AccountManagement/Moreaccount' element={<Moreaccount/>}/>
-          <Route path='/dashboard/AccountManagement/Updateaccount' element={<Updateaccount/>}/>
-          <Route path='/dashboard/Diarywork' element={<Diarywork/>}/>
+          <Route path='/dashboard/AccountManagement' element={<><Listitem /><AccountManagement/></>}/>
+          <Route path='/dashboard/AccountManagement/Moreaccount' element={<><Listitem /><Moreaccount/></>}/>
+          <Route path='/dashboard/AccountManagement/Updateaccount' element={<><Listitem /><Update/></>}/>
+          <Route path='/dashboard/Diarywork' element={<><Listitem /><Diaryuser/></>}/>
           <Route path='/Device' element={<><Listitem/> <Device/></>}/>
           <Route path='/Device/add-device' element={<Adddevice/>}/>
           <Route path='/service' element={<><Listitem/> <Service/></>}/>
           <Route path='/service/detailservice' element={<><Listitem/> <Detailservice/></>}/>
           <Route path='/report' element={<><Listitem/> <Report/></>}/>
           <Route path='/listservice' element={<Addservice/>}/>
-          <Route path='/dashboard/RoleManagement' element={<RoleManagement/>}/>
+          <Route path='/dashboard/RoleManagement' element={<><Listitem/><RoleManagement/></>}/>
           <Route path='/dashboard/RoleManagement/add-role-management' element={<AddRole/>}/>
+          <Route path='/dashboard/RoleManagement/update-role-management' element={<UpdateRole/>}/>
           <Route path='/service/detailservice' element={<Detailservice/>}/>
           <Route path='/device/detaildevice' element={<Detaildevice/>}/>
           <Route path='/device/updatedevice' element={<Updatedevice/>}/>

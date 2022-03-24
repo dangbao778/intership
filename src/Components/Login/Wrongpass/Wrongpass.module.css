@@ -1,4 +1,4 @@
-.login{
+.wrongpassword{
     display: flex;
     width: 1440px;
     height:  810px;
@@ -18,8 +18,7 @@
     height: auto;
 }
 
-.login1{
-    
+.form{
     position: absolute;
     width: 400px;
     left: 94px;
@@ -28,13 +27,12 @@
 
 }
 .title{
-   
     border: 1.5px solid #D4D4D7;
     box-sizing: border-box;
     border-radius: 8px;
     padding: 10px 220px 10px 12px;
 }
-.name{
+.username{
     margin: 4px 0px;
 }
 .password{
@@ -43,16 +41,9 @@
 }
 
 .wrongpass{
-    /* position: absolute;
-    width: 102px;
-    height: 21px; */
     display: flex;
     margin-top: 10px;
-    
-    }
-
-.warning{}
-
+}
 .wrongpasstitle{
     font-family: Nunito;
     font-style: normal;
@@ -62,11 +53,11 @@
     color: #E73F3F;
     margin-left: 5px;
 }
-.pass{
+.forgotpass{
     position: absolute;
     width: 102px;
     height: 21px;
-    left: 246px;
+    left: 235px;
     top: 535px;
     font-family: Nunito;
     font-style: normal;
@@ -101,11 +92,7 @@
     color: #FFF;
     cursor: pointer;
 }
-.right{
-    width: 848px;
-    height: auto;
-}
-.log__in{
+.login{
     color: #FFF;
     font-family: Nunito;
     font-style: normal;
@@ -113,8 +100,12 @@
     font-size: 16px;
     line-height: 21px;
     text-align: center;
-
 }
+.right{
+    width: 848px;
+    height: auto;
+}
+
 .pic5{
     position: absolute;
     width: 605px;
@@ -124,18 +115,12 @@
 }
 .pic8{
     position: absolute;
-    
     left: 1046px;
     top: 407px;
-    
-   
     }
 
 .pic6{
     position: absolute;
-
     left: 1046px;
     top: 454px;
-    
-    
 }

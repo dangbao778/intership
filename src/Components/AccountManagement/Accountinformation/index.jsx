@@ -18,9 +18,9 @@ function Accountinformation(){
     const optionsstatus = [
         'Hoạt động','kế toán ','Ngưng hoạt động ','Tất cả '
     ];
-    const sumitstatus =(e)=>{
-        console.log(e.value)
-    }
+    // const sumitstatus =(e)=>{
+    //     console.log(e.value)
+    // }
     const defaultOptionstatus = optionsstatus[0];
     return(
     <div className={infoaccount.account}>
@@ -30,10 +30,12 @@ function Accountinformation(){
                     Cài đặt hệ thống
                 </p>
                     <img src={Levelgoto} alt="levelgoto" className={infoaccount.levelgoto}></img>
-                <p className={infoaccount.accounttitle }>
-                    Quản lý tài khoản
-                </p>
-                    <img src={Levelgoto} alt="levelgoto" className={infoaccount.levelgoto}></img>
+                <Link to ='/dashboard/AccountManagement'>
+                    <p className={infoaccount.accounttitle }>
+                        Quản lý tài khoản
+                    </p>
+                </Link>
+                <img src={Levelgoto} alt="levelgoto" className={infoaccount.levelgoto}></img>
                 <p className={infoaccount.accountlist }>
                     Thêm tài khoản
                 </p>
@@ -56,39 +58,38 @@ function Accountinformation(){
                             <p className={infoaccount.accountid}>Họ tên
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            
-                            <input className={infoaccount.titlecontnet} type="text"  name="" placeholder="Nhập họ tên"/>
+                            <input className={infoaccount.titlecontnet} type="text" placeholder="Nhập họ tên"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Tên đăng nhập:
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text"  name="" placeholder="Nhập tên đăng nhập"/>
+                            <input className={infoaccount.titlecontnet} type="text"  placeholder="Nhập tên đăng nhập"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Số điện thoại
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text"  name="" placeholder="Nhập số điện thoại"/>
+                            <input className={infoaccount.titlecontnet} type="text"  placeholder="Nhập số điện thoại"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Mật khẩu:
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="password"  name="" placeholder="******"/>
+                            <input className={infoaccount.titlecontnet} type="password"  placeholder="******"/>
                             <img src={eyeclose} alt='star' className={infoaccount.eyeclosepass}></img>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Email
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text"  name="" placeholder="Nhập email"/>
+                            <input className={infoaccount.titlecontnet} type="text"  placeholder="Nhập email"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Nhập lại mật khẩu
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="password"  name="" placeholder="******"/>
+                            <input className={infoaccount.titlecontnet} type="password"  placeholder="******"/>
                             <img src={eyeclose} alt='star' className={infoaccount.eyeclosenewpass}></img>
                         </div>
                         <div className={infoaccount.accountname}>
@@ -120,13 +121,15 @@ function Accountinformation(){
             </div>
             <div className={infoaccount.userbutton}>
                 <Link to ='/dashboard/AccountManagement'>
-                <div className={infoaccount.cannel}>
-                    <div className={infoaccount.canneltitle}>Hủy bỏ  </div>
-                </div>
+                    <div className={infoaccount.cannel}>
+                        <div className={infoaccount.canneltitle}>Hủy bỏ  </div>
+                    </div>
                 </Link>
-                <div     className={infoaccount.more}>
-                    <div className={infoaccount.moretitle}>Thêm  </div>
-                </div>
+                <Link to ='/dashboard/AccountManagement'>
+                    <div className={infoaccount.more}>
+                        <div className={infoaccount.moretitle}>Thêm  </div>
+                    </div>
+                </Link>
             </div>
         </div>
     </div>

@@ -71,6 +71,7 @@
     background: #FFFFFF;
     box-shadow: 2px 2px 8px rgba(232, 239, 244, 0.8);
     border-radius: 16px;
+    width: 100%;
 }
 
 .accountlistinformation{
@@ -108,11 +109,11 @@
     border: 1.5px solid #D4D4D7;
     box-sizing: border-box;
     border-radius: 8px;
-    width: 550px;
+    width: 700px;
 }
 
 .accountdrow{
-    width: 550px;
+    width: 700px;
 }
 
 .accountdrow .Dropdown-placeholder is-selected{
@@ -132,13 +133,13 @@
 
 .eyeclosepass{
     position: absolute;
-    right: 70px;
+    right: 150px;
     top: 324px;
 }
 
 .eyeclosenewpass{
     position: absolute;
-    right: 70px;
+    right: 150px;
     top: 411px;
 }
 
@@ -156,7 +157,7 @@
     border-radius: 8px;
     padding: 10px 24px;
     width: 147px;
-    margin-left: 26px;
+    margin-left: 28px;
 }
 
 .more{
@@ -166,7 +167,7 @@
     padding: 10px 24px;
     width: 147px;
     box-sizing: border-box;
-    margin-left: 26px;
+    margin-left: 10px;
 }
 
 .canneltitle{

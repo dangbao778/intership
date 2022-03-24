@@ -1,6 +1,5 @@
 import Context from './Context'
 import {useState,useEffect} from 'react'
-
 import db from '../firebase.config'
 
 function Provider ({children} ) {
@@ -24,7 +23,7 @@ function Provider ({children} ) {
 
     useEffect(() => {
         fetchBlogs();
-      }, [])
+    }, [])
 
 
 return (

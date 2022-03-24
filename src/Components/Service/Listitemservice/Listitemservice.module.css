@@ -87,7 +87,7 @@
 }
 .serviceitem{
     margin-right: 26px;
-  
+
 }
 .listitem{
     display: flex;
@@ -177,19 +177,8 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
-
-    color: #FFFFFF;
-}
-
-.serviceitemnametitle{
-    margin-left: 10px;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-    
+    /* color: #FFFFFF; */
+    color: #282739;
 }
 .logo{
     margin-left: 10px;

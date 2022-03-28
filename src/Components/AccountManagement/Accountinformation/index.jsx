@@ -6,7 +6,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import star from '../../image/star.svg'
 import eyeclose from '../../image/eyeclose.svg'
-function Accountinformation(){
+function AddAccount(){
     const optionsaccount = [
         'Chọn vai trò','kế toán ','Quản lý ','Admin '
         ];
@@ -14,13 +14,9 @@ function Accountinformation(){
             console.log(e.value)
         }
     const defaultOptionaccount = optionsaccount[0];
-
     const optionsstatus = [
         'Hoạt động','kế toán ','Ngưng hoạt động ','Tất cả '
     ];
-    // const sumitstatus =(e)=>{
-    //     console.log(e.value)
-    // }
     const defaultOptionstatus = optionsstatus[0];
     return(
     <div className={infoaccount.account}>
@@ -58,38 +54,38 @@ function Accountinformation(){
                             <p className={infoaccount.accountid}>Họ tên
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text" placeholder="Nhập họ tên"/>
+                            <input className={infoaccount.titlecontent} type="text" placeholder="Nhập họ tên"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Tên đăng nhập:
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text"  placeholder="Nhập tên đăng nhập"/>
+                            <input className={infoaccount.titlecontent} type="text"  placeholder="Nhập tên đăng nhập"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Số điện thoại
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text"  placeholder="Nhập số điện thoại"/>
+                            <input className={infoaccount.titlecontent} type="text"  placeholder="Nhập số điện thoại"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Mật khẩu:
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="password"  placeholder="******"/>
+                            <input className={infoaccount.titlecontent} type="password"  placeholder="******"/>
                             <img src={eyeclose} alt='star' className={infoaccount.eyeclosepass}></img>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Email
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="text"  placeholder="Nhập email"/>
+                            <input className={infoaccount.titlecontent} type="text"  placeholder="Nhập email"/>
                         </div>
                         <div className={infoaccount.accountname}>
                             <p className={infoaccount.accountid}>Nhập lại mật khẩu
                             <img src={star} alt='star' className={infoaccount.starid}></img>
                             </p>
-                            <input className={infoaccount.titlecontnet} type="password"  placeholder="******"/>
+                            <input className={infoaccount.titlecontent} type="password"  placeholder="******"/>
                             <img src={eyeclose} alt='star' className={infoaccount.eyeclosenewpass}></img>
                         </div>
                         <div className={infoaccount.accountname}>
@@ -98,8 +94,8 @@ function Accountinformation(){
                             </p>
                             <div className={infoaccount.accountdrow}>
                                 <Dropdown options={optionsaccount}  
-                                        onChange={(e)=>sumitaccount(e)} 
-                                        value={defaultOptionaccount} placeholder="Select an option" />
+                                    onChange={(e)=>sumitaccount(e)} 
+                                    value={defaultOptionaccount} placeholder="Select an option" />
                             </div>
                         </div>
                         <div className={infoaccount.accountname}>
@@ -108,8 +104,8 @@ function Accountinformation(){
                             </p>
                             <div className={infoaccount.accountdrow}>
                                 <Dropdown options={optionsaccount}  
-                                        onChange={(e)=>sumitaccount(e)} 
-                                        value={defaultOptionaccount} placeholder="Select an option" />
+                                    onChange={(e)=>sumitaccount(e)} 
+                                    value={defaultOptionaccount} placeholder="Select an option" />
                             </div>
                         </div>
                         <div className={infoaccount.accountnameitem}>
@@ -136,4 +132,4 @@ function Accountinformation(){
     )
 }
 
-export default Accountinformation;
+export default AddAccount;

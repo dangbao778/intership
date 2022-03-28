@@ -154,7 +154,7 @@
 }
 .diarytablelist{
     display: flex;
-    color:white;
+    /* color:white; */
     width: 100%;
     background: #FFFFFF;
 }
@@ -193,7 +193,6 @@
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
-    
 }
 
 .diaryitemlist{
@@ -217,7 +216,7 @@
     margin-left: 10px;
     font-family: Nunito;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 }

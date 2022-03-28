@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 import DatePicker from "react-datepicker";
 import Dropdown from 'react-dropdown';
 import Page from "../../Page";
-// import '../style./report.';
 import goright from "../../image/goright.svg"
 import reportgoto from "../../image/gotoright.svg";
 import {useState, useEffect} from 'react';
@@ -198,14 +197,14 @@ function Listreport({dataTable,fetchData }:any){
         </div>
     )
 }
-const mapStateToProps = (state:any) =>{
-    return {
-    dataTable:state.dataAlta
+    const mapStateToProps = (state:any) =>{
+        return {
+        dataTable:state.dataAlta
+        }
     }
-}
-const mapDispatchToProps = (dispatch:any) =>{
-    return {
-        fetchData: ()=>  dispatch(fetchData()),
+    const mapDispatchToProps = (dispatch:any) =>{
+        return {
+            fetchData: ()=>  dispatch(fetchData()),
+        }
     }
-}
 export default connect(mapStateToProps, mapDispatchToProps)(Listreport)

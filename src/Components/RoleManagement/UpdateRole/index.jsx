@@ -8,7 +8,6 @@ import star from '../../image/star.svg'
 function UpdateRole(){
     const [nameAddRole, setNameAddRole] = useState()
     const [desService , setDesService] = useState()
-    // const [desAddRole , setDesAddRole] = useState<string>()
     return(
         <div className={updaterole_style.listrole}>
             <Listitem/>
@@ -157,7 +156,7 @@ function UpdateRole(){
                                     <Link to="/dashboard/RoleManagement"><button>Hủy bỏ</button></Link>
                                 </div>
                                 <div className={updaterole_style.contaniner__addrole}>
-                                    <Link to='/dashboard/RoleManagement'><button>Thêm</button></Link>
+                                    <Link to='/dashboard/RoleManagement'><button>Cập nhật</button></Link>
                                 </div>
                             </div>
                     </div>

@@ -1,18 +1,14 @@
 .account{
     position: relative;
+    width: 100%;
+    padding: 20px;
+    background: #F7F7F7;
+    height: 930px;
 }
-.levelgoto{
-    color: #7E7D88;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .accountinfo{
     display:flex;
     justify-content:space-between;
-    
 }
-
 .accountinfolist{
     display: flex;
     align-items: center;
@@ -25,15 +21,11 @@
     line-height: 30px;
     color: #7E7D88;
 }
-.id{
-    margin-left: -5px;
-}
-.accountgoto{
+.go{
     color: #7E7D88;
     padding-left: 10px;
     padding-right: 10px;
 }
-
 .accountlist{
     font-family: Nunito;
     font-style: normal;
@@ -41,13 +33,10 @@
     font-size: 20px;
     line-height: 30px;
     color: #FF7506;
-
 }
-
 .bell{
     padding-right: 40px;
 }
-
 .accountcontainer{
     display: flex;
     flex-direction: column;
@@ -62,25 +51,17 @@
     line-height: 36px;
     color: #FF7506;
 }
-
-.accountlistitem{
-    width: 1005;
-}
-
 .accountlistdrow{
-    /* display: flex; */
     margin-top: 20px;
 }
 .accountitemdrow{
     display: flex;
     justify-content: space-between; 
-    
 }
 .accountitem{
     margin-right: 30px;
 }
-
-.accountname{
+.rolename {
     font-family: Nunito;
     font-style: normal;
     font-weight: 600;
@@ -90,8 +71,15 @@
 }
 .accountdrow{
     width: 300px;
-} 
-
+}
+.keyword{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #282739;
+}
 .accountdrow input{
     padding: 10px 16px 10px 12px;   
     background: #FFFFFF;
@@ -101,13 +89,11 @@
     width: 300px;
     height: 44px;
 }
-
 .fi_search{
     position: absolute;
-    right: 92px;
-    top: 178px;
+    right: 130px;
+    top: 200px;
 }
-
 .tablelistitem{
     margin-bottom:10px;
     width: 97.5%;
@@ -119,19 +105,36 @@
     padding: 0px;
     margin-top:20px;
 }
-
 .accounttable{
-    /* display: grid;
-    grid-template-columns: 93px 162px 171px 161px 174px 147px 120px 78px; */
     display: flex;
     color:white;
     width: 100%;
     background: #FF9138;
 }
+.accountitemname{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    height: 49px;
+    border-right: 1px solid #FFE3CD;
+}
 
+
+
+.id{
+    margin-left: -5px;
+}
+.accountgoto{
+    color: #7E7D88;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.accountlistitem{
+    width: 1005;
+}
 .accounttablelist{
     display: flex;
-    color:white;
+    /* color:white; */
     width: 100%;
     background: #FFFFFF;
 }
@@ -140,13 +143,7 @@
 
 }
 
-.accountitemname{
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    height: 49px;
-    border-right: 1px solid #FFE3CD;
-}
+
 
 .accountitemnametitle{
     margin-left: 10px;
@@ -178,7 +175,7 @@
     margin-left: 10px;
     font-family: Nunito;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 }

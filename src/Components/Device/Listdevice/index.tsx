@@ -51,38 +51,34 @@ function Listdevice({dataTable,fetchData}:any){
     }  
     const data = dataTable.dataEquiment
     const [dataEquiment,setDataEquiment] = useState(data)
-const options = [
-    'Tất cả', 'Hoạt động', 'Ngưng hoạt động'
+    const options = [
+        'Tất cả', 'Hoạt động', 'Ngưng hoạt động'
+        ];
+    const defaultOption = options[0];
+    const optionsConnect = [
+    'Tất cả', 'Kết nối', 'Mất kết nối'
     ];
-const defaultOption = options[0];
-
-const optionsConnect = [
-'Tất cả', 'Kết nối', 'Mất kết nối'
-];
     const handleDropdownValue = (e:any)=>{    
-            if(e.value=='Hoạt động'){
-                    const filterdata = data.filter( (item:any) => item.status == 'Hoạt động')
-                    setDataEquiment(filterdata)
-            }else if(e.value == 'Ngưng hoạt động') {
-                    const filterdata = data.filter((item:any)=> item.status == 'Ngưng hoạt động')
-                    setDataEquiment(filterdata)
-            }
-            else if(e.value == 'Ngưng hoạt động') {
-                    const filterdata = data.filter((item:any)=> item.status == 'Ngưng hoạt động')
-                    setDataEquiment(filterdata)
-            }
-            else if(e.value == 'Kết nối') {
-                    const filterdata = data.filter((item:any)=> item.connet == 'Kết nối')
-                    setDataEquiment(filterdata)
-            }
-            else{
-                    setDataEquiment(data)
-            }
+        if(e.value=='Hoạt động'){
+                const filterdata = data.filter( (item:any) => item.status == 'Hoạt động')
+                setDataEquiment(filterdata)
+        }else if(e.value == 'Ngưng hoạt động') {
+                const filterdata = data.filter((item:any)=> item.status == 'Ngưng hoạt động')
+                setDataEquiment(filterdata)
         }
-    
-    
+        else if(e.value == 'Ngưng hoạt động') {
+                const filterdata = data.filter((item:any)=> item.status == 'Ngưng hoạt động')
+                setDataEquiment(filterdata)
+        }
+        else if(e.value == 'Kết nối') {
+                const filterdata = data.filter((item:any)=> item.connet == 'Kết nối')
+                setDataEquiment(filterdata)
+        }
+        else{
+                setDataEquiment(data)
+        }
+    }
     const [showMore , setShowMore] = useState(false)
-
     const [search , setSeatch] = useState('')
     return(
         <div className={listdevice_style.device}>
@@ -120,17 +116,16 @@ const optionsConnect = [
                                     <Dropdown options={optionsConnect} 
                                     onChange={(e)=>handleDropdownValue(e)} 
                                     value={defaultOption} placeholder="Select an option" />
-                                        
                                 </div>
                         </div>
                     </div>
                     <div className={listdevice_style.deviceitemseach}>
                         <div className={listdevice_style.devicename}>Từ khoá</div>
                         <div className={listdevice_style.searchinput}>
-                                <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSeatch(e.target.value)}/>
-                                <div className={listdevice_style.fi_search}>
+                            <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSeatch(e.target.value)}/>
+                            <div className={listdevice_style.fi_search}>
                                 <img src={fi_search} alt="" />
-                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,31 +158,31 @@ const optionsConnect = [
                         {
                         dataEquiment.map ( (item:any,index:any)=>   
                     <div className={listdevice_style.servicetablelist}key={index}>
-                        <div className={listdevice_style.deviceitemname} style={{width:"110px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"110px", height:"63px"}}>
                             <div className={listdevice_style.deviceitemnametitleid}>{item.code} </div>    
                         </div>
-                        <div className={listdevice_style.deviceitemname} style={{width:"150px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"150px", height:"63px"}}>
                             <div className={listdevice_style.deviceitemnametitleid}>{item.name}  </div>    
                         </div>
-                        <div className={listdevice_style.deviceitemname} style={{width:"145px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"145px", height:"63px"}}>
                                 
                             <div className={listdevice_style.deviceitemnametitleid}>{item.adress}  </div>  
                         </div>
-                        <div className={listdevice_style.deviceitemname} style={{width:"220px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"220px", height:"63px"}}>
                             <div className={`${listdevice_style.deviceitemnametitleid} ${listdevice_style.id}`}>
                                 
                                 {item.status=="Ngưng hoạt động"&&<ServiceWaitPoint/>}
                                 {item.status=="Hoạt động"&&<ServiceUsedPoint/>}
                         </div>    
                         </div>
-                        <div className={listdevice_style.deviceitemname} style={{width:"180px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"180px", height:"63px"}}>
                             <div className={`${listdevice_style.deviceitemnametitleid} ${listdevice_style.id}`}>
                                 
                                 {item.connet == 'Mất kết nối' && <ServiceWaitPoint1/>}
                             {item.connet == 'Kết nối' && <ServiceUsedPoint1/>}
                         </div>    
                         </div>
-                        <div className={listdevice_style.deviceitemname} style={{width:"450px"}}>
+                        <div className={listdevice_style.deviceitemname} style={{width:"450px", height:"63px"}}>
                                 <div className={listdevice_style.deviceitemnametitleid}> 
                                     {item.node}
                                     {
@@ -228,14 +223,14 @@ const optionsConnect = [
     )
 }
 
-const mapStateToProps = (state:any) =>{
-    return {
-    dataTable:state.dataAlta
+    const mapStateToProps = (state:any) =>{
+        return {
+        dataTable:state.dataAlta
+        }
     }
-}
-const mapDispatchToProps = (dispatch:any) =>{
-    return {
-        fetchData: ()=>  dispatch(fetchData()),
+    const mapDispatchToProps = (dispatch:any) =>{
+        return {
+            fetchData: ()=>  dispatch(fetchData()),
+        }
     }
-}
 export default connect(mapStateToProps,mapDispatchToProps)(Listdevice)

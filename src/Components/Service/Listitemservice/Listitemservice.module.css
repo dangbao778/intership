@@ -1,18 +1,10 @@
 .service{
     position: relative;
 }
-.servicegoto{
-    color: #7E7D88;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 .serviceinfo{
     display:flex;
     justify-content:space-between;
-    /* padding: 20px 0px; */
 }
-
 .serviceinfolist{
     display: flex;
     align-items: center;
@@ -25,7 +17,11 @@
     line-height: 30px;
     color: #7E7D88;
 }
-
+.servicegoto{
+    color: #7E7D88;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .servicegoto{
     color: #7E7D88;
     padding-left: 10px;
@@ -52,10 +48,6 @@
     width: 95%;
     margin-top: 20px;
 }
-/* .listadd{
-    display: flex;
-    flex-direction: column
-} */
 .servicelisttitle{
     font-family: Nunito;
     font-style: normal;
@@ -63,44 +55,20 @@
     font-size: 24px;
     line-height: 36px;
     color: #FF7506;
-
 }
-
-
-.fi_search{
-    position: absolute;
-    right: 101px;
-    top: 159px;
-}
-
-.servicelistdrow{
+.service_taskbar{
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
 }
-
 .serviceitemdrow{
     display: flex;
-    /* justify-content: space-between;  */
     width: 95%;
-    
 }
-.serviceitem{
+.service_item{
     margin-right: 26px;
-
 }
-.listitem{
-    display: flex;
-    justify-content: space-between;
-} 
-
-.goright{
-    height: 5px;
-    width: 4.5px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.servicename{
+.taskbar_name{
     font-family: Nunito;
     font-style: normal;
     font-weight: 600;
@@ -108,6 +76,20 @@
     line-height: 24px;
     color: #282739;
 }
+
+.fi_search{
+    position: absolute;
+    right: 101px;
+    top: 159px;
+}
+
+.goright{
+    height: 5px;
+    width: 4.5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .servicedrow{
     width: 300px;
 } 
@@ -138,21 +120,18 @@
     margin-top:20px;
 }
 
-.servicetable{
-    /* display: grid;
-    grid-template-columns: 93px 162px 171px 161px 174px 147px 120px 78px; */
+.service_table{
     display: flex;
     color:white;
     width: 100%;
     background: #FF9138;
 }
-.servicetablelist{
+.service_table_list{
     display: flex;
-    color:white;
     width: 100%;
     background: #FFFFFF;
 }
-.servicetablelist:nth-child(2n+1){
+.service_table_list:nth-child(2n+1){
     background: #FFF2E7;
 }
 .servicetablelistid{
@@ -177,8 +156,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
-    /* color: #FFFFFF; */
-    color: #282739;
+    color: #FFFFFF;
 }
 .logo{
     margin-left: 10px;
@@ -189,7 +167,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 21px;
-    color: #535261;
+    color: #FFFFFF;
     margin-left: 10px;
 }
 .serviceitemnameid{
@@ -204,7 +182,7 @@
     margin-left: 10px;
     font-family: Nunito;
     font-style: normal;
-    font-weight: bold;
+    /* font-weight: 600; */
     font-size: 16px;
     line-height: 24px;
 }

@@ -5,7 +5,7 @@ firebase.initializeApp({
   apiKey: "AIzaSyD2H3YLtz0b8HleHwDXOODstE8auQs9Fag",
   authDomain: "intership-de498.firebaseapp.com",
   databaseURL: "https://intership-de498-default-rtdb.firebaseio.com",
-  projectId: "intership-de498",
+  projectId: "reactjs-648cf",
   storageBucket: "intership-de498.appspot.com",
   messagingSenderId: "825754694813",
   appId: "1:825754694813:web:e568c42dabfd475264d074",

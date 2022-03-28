@@ -11,10 +11,8 @@ import {Routes , Route } from 'react-router-dom';
 import Addlevel from './Components/Level/Addlevel';
 import Information  from './Components/Level/Information';
 import Numberlevel from './Components/Level/Numberlevel';
-import AccountManagement from './Components/AccountManagement';
-import Moreaccount from './Components/Moreaccount';
+import AccountManagement from './Components/AccountManagement/Listaccount';
 import Service from './Components/Service';
-import Device from './Components/Device';
 import Adddevice from './Components/Device/Adddevice';
 import Addservice from './Components/Service/Addservice';
 import Detailservice from './Components/Service/Detailservice';
@@ -26,7 +24,9 @@ import Updatedevice from './Components/Device/Updatedevice';
 import Listitem from './Components/Listitem'
 import UpdateRole from './Components/RoleManagement/UpdateRole';
 import Update from './Components/AccountManagement/Update';
-import Diaryuser from './Components/Diarywork';
+import Diaryuser from './Components/UserDiary';
+import AddAccount from './Components/AccountManagement/Accountinformation';
+import Listdevice from './Components/Device/Listdevice';
 function App() {
   return (
     <div className="App"> 
@@ -44,10 +44,10 @@ function App() {
           <Route path='/level/numberlevel' element={< Numberlevel/>}/>
           <Route path='/level/numberlevel/level' element={< Listlevel/>}/>
           <Route path='/dashboard/AccountManagement' element={<><Listitem /><AccountManagement/></>}/>
-          <Route path='/dashboard/AccountManagement/Moreaccount' element={<><Listitem /><Moreaccount/></>}/>
+          <Route path='/dashboard/AccountManagement/addaccount' element={<><Listitem /><AddAccount/></>}/>
           <Route path='/dashboard/AccountManagement/Updateaccount' element={<><Listitem /><Update/></>}/>
           <Route path='/dashboard/Diarywork' element={<><Listitem /><Diaryuser/></>}/>
-          <Route path='/Device' element={<><Listitem/> <Device/></>}/>
+          <Route path='/Device' element={<><Listitem/> <Listdevice/></>}/>
           <Route path='/Device/add-device' element={<Adddevice/>}/>
           <Route path='/service' element={<><Listitem/> <Service/></>}/>
           <Route path='/service/detailservice' element={<><Listitem/> <Detailservice/></>}/>

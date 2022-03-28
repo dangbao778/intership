@@ -23,9 +23,9 @@ function Listitemservice({dataTable,fetchData, }:any){
     const [search , setSearch] = useState('')
     const ServiceWaitPoint = ()=>{
         return (
-                <><span className="green">
+            <><span className="green">
                 <img src={green} alt="green"></img>
-                </span><span>Hoạt động</span></>
+            </span><span>Hoạt động</span></>
         )
     }  
     const ServiceUsedPoint = ()=>{
@@ -36,22 +36,22 @@ function Listitemservice({dataTable,fetchData, }:any){
         )
     }  
     const data = dataTable.dataService
-        const [dataServiceTable  , setDataServiceTable] = useState(data)
+    const [dataServiceTable  , setDataServiceTable] = useState(data)
     const options = [
         'Tất cả', 'Hoạt động', 'Ngưng hoạt động'
     ];
 const defaultOption = options[0];
         const handleDropdownValue = (e: any)=>{
-                if(e.value=='Hoạt động'){
-                        const filterdata = data.filter( (item:any)=> item.status == 'Hoạt động')
-                        setDataServiceTable(filterdata)
-                }else if(e.value=='Ngưng hoạt động') {
-                    const filterdata = data.filter((item:any) => item.status == 'Ngưng hoạt động')
+            if(e.value=='Hoạt động'){
+                    const filterdata = data.filter( (item:any)=> item.status == 'Hoạt động')
                     setDataServiceTable(filterdata)
-                }
-                else{
-                        setDataServiceTable(data)
-                }
+            }else if(e.value=='Ngưng hoạt động') {
+                const filterdata = data.filter((item:any) => item.status == 'Ngưng hoạt động')
+                setDataServiceTable(filterdata)
+            }
+            else{
+                    setDataServiceTable(data)
+            }
         }
     return (
         <div className={listitemservice.service}>
@@ -73,18 +73,18 @@ const defaultOption = options[0];
                 <div className={listitemservice.servicelisttitle}>
                     Quản lý dịch vụ
                 </div>
-                <div className={listitemservice.servicelistdrow}>
+                <div className={listitemservice.service_taskbar}>
                     <div className={listitemservice.serviceitemdrow}>  
-                        <div className={listitemservice.serviceitem}>
-                            <div className={listitemservice.servicename}>Tên vai trò</div>
+                        <div className={listitemservice.service_item}>
+                            <div className={listitemservice.taskbar_name}>Tên vai trò</div>
                                 <div className={listitemservice.servicedrow}>
                                     <Dropdown options={options}  
                                         onChange={(e)=>handleDropdownValue(e)} 
                                         value={defaultOption} placeholder="Select an option" />
                                 </div>
                         </div>
-                        <div className={listitemservice.serviceitem}>
-                            <div className={listitemservice.servicenamee}>Chọn thời gian</div>
+                        <div className={listitemservice.service_item}>
+                            <div className={listitemservice.taskbar_name}>Chọn thời gian</div>
                                 <div className={listitemservice.servicedrowcalendar}>
                                     
                                     <DatePicker 
@@ -95,7 +95,7 @@ const defaultOption = options[0];
                         </div>
                     </div>
                         <div className={listitemservice.serviceitem}>
-                            <div className={listitemservice.servicename}>Từ khoá</div>
+                            <div className={listitemservice.taskbar_name}>Từ khoá</div>
                                 <div className={listitemservice.servicedrow}>
                                 <input placeholder="Nhập từ khóa" value={search} onChange={(e)=> setSearch(e.target.value)}/>
                                 <div className={listitemservice.fi_search}>
@@ -105,7 +105,7 @@ const defaultOption = options[0];
                         </div>
                 </div>
                 <div className={listitemservice.tablelistitem}>
-                    <div className={listitemservice.servicetable}>
+                    <div className={listitemservice.service_table}>
                         <div className={listitemservice.serviceitemname} style={{width:"200px"}}>
                             <p className={listitemservice.serviceitemnametitle}> Mã dịch vụ </p>    
                         </div>
@@ -127,7 +127,7 @@ const defaultOption = options[0];
                     </div>
                     {
                         dataServiceTable.map ( (item:any,index:any)=>   
-                    <div className={listitemservice.servicetablelist} key={index}>
+                    <div className={listitemservice.service_table_list} key={index}>
                         <div className={listitemservice.serviceitemname} style={{width:"200px"}}>
                             <p className={listitemservice.serviceitemnametitleid}>{item.code} </p>    
                         </div>
@@ -171,14 +171,14 @@ const defaultOption = options[0];
         </div>
     )
 }
-const mapStateToProps = (state:any) =>{
-    return {
-    dataTable:state.dataAlta
+    const mapStateToProps = (state:any) =>{
+        return {
+        dataTable:state.dataAlta
+        }
     }
-}
-const mapDispatchToProps = (dispatch:any) =>{
-    return {
-        fetchData: ()=>  dispatch(fetchData()),
+    const mapDispatchToProps = (dispatch:any) =>{
+        return {
+            fetchData: ()=>  dispatch(fetchData()),
+        }
     }
-}
 export default connect(mapStateToProps,mapDispatchToProps)(Listitemservice);
